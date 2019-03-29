@@ -2,10 +2,10 @@
   font-family: 'Playfair Display Regular';
   src: url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.eot');
   src: url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.woff2') format('woff2'),
-      url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.woff') format('woff'),
-      url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.ttf') format('truetype'),
-      url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.svg#PlayfairDisplay-Regular') format('svg');
+    url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.woff2') format('woff2'),
+    url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.woff') format('woff'),
+    url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.ttf') format('truetype'),
+    url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.svg#PlayfairDisplay-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,10 +14,10 @@
   font-family: 'Playfair Display Bold';
   src: url('../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold.eot');
   src: url('../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold.woff2') format('woff2'),
-      url('../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold.woff') format('woff'),
-      url('../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold.ttf') format('truetype'),
-      url('../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold.svg#PlayfairDisplay-Bold') format('svg');
+    url('../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold.woff2') format('woff2'),
+    url('../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold.woff') format('woff'),
+    url('../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold.ttf') format('truetype'),
+    url('../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold.svg#PlayfairDisplay-Bold') format('svg');
   font-weight: bold;
   font-style: normal;
 }
@@ -26,10 +26,10 @@
   font-family: 'League Spartan Bold';
   src: url('../fonts/LeagueSpartan-Bold/LeagueSpartan-Bold.eot');
   src: url('../fonts/LeagueSpartan-Bold/LeagueSpartan-Bold.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/LeagueSpartan-Bold/LeagueSpartan-Bold.woff2') format('woff2'),
-      url('../fonts/LeagueSpartan-Bold/LeagueSpartan-Bold.woff') format('woff'),
-      url('../fonts/LeagueSpartan-Bold/LeagueSpartan-Bold.ttf') format('truetype'),
-      url('../fonts/LeagueSpartan-Bold/LeagueSpartan-Bold.svg#LeagueSpartan-Bold') format('svg');
+    url('../fonts/LeagueSpartan-Bold/LeagueSpartan-Bold.woff2') format('woff2'),
+    url('../fonts/LeagueSpartan-Bold/LeagueSpartan-Bold.woff') format('woff'),
+    url('../fonts/LeagueSpartan-Bold/LeagueSpartan-Bold.ttf') format('truetype'),
+    url('../fonts/LeagueSpartan-Bold/LeagueSpartan-Bold.svg#LeagueSpartan-Bold') format('svg');
   font-weight: bold;
   font-style: normal;
 }
@@ -38,10 +38,10 @@
   font-family: 'Fira Sans Regular';
   src: url('../fonts/FiraSans-Regular/FiraSans-Regular.eot');
   src: url('../fonts/FiraSans-Regular/FiraSans-Regular.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/FiraSans-Regular/FiraSans-Regular.woff2') format('woff2'),
-      url('../fonts/FiraSans-Regular/FiraSans-Regular.woff') format('woff'),
-      url('../fonts/FiraSans-Regular/FiraSans-Regular.ttf') format('truetype'),
-      url('../fonts/FiraSans-Regular/FiraSans-Regular.svg#FiraSans-Regular') format('svg');
+    url('../fonts/FiraSans-Regular/FiraSans-Regular.woff2') format('woff2'),
+    url('../fonts/FiraSans-Regular/FiraSans-Regular.woff') format('woff'),
+    url('../fonts/FiraSans-Regular/FiraSans-Regular.ttf') format('truetype'),
+    url('../fonts/FiraSans-Regular/FiraSans-Regular.svg#FiraSans-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -50,10 +50,10 @@
   font-family: 'Poppins Light';
   src: url('../fonts/Poppins-Light/Poppins-Light.eot');
   src: url('../fonts/Poppins-Light/Poppins-Light.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/Poppins-Light/Poppins-Light.woff2') format('woff2'),
-      url('../fonts/Poppins-Light/Poppins-Light.woff') format('woff'),
-      url('../fonts/Poppins-Light/Poppins-Light.ttf') format('truetype'),
-      url('../fonts/Poppins-Light/Poppins-Light.svg#Poppins-Light') format('svg');
+    url('../fonts/Poppins-Light/Poppins-Light.woff2') format('woff2'),
+    url('../fonts/Poppins-Light/Poppins-Light.woff') format('woff'),
+    url('../fonts/Poppins-Light/Poppins-Light.ttf') format('truetype'),
+    url('../fonts/Poppins-Light/Poppins-Light.svg#Poppins-Light') format('svg');
   font-weight: 300;
   font-style: normal;
 }

@@ -1,0 +1,41 @@
+.header {
+
+  .navigation-wrapper {
+    display: flex;
+    height: 128px;
+    align-items: center;
+  }
+
+  .logo {
+    margin-right: 190px;
+  }
+
+  .navigation {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+
+      /* &:last-child {
+        margin-right: 0;
+      } */
+    }
+
+    &__link {
+      text-decoration: none;
+      font-family: $font-third;
+      font-size: 9px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: rgba(11, 12, 17, 0.9);
+      line-height: 7.33;
+      letter-spacing: 5.6px;
+    }
+  }
+}

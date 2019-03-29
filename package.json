@@ -2,7 +2,7 @@
   "name": "SurfingClub",
   "author": "NJul",
   "version": "1.0.0",
-  "description": "Video layout, layout in my own way",
+  "description": "Flex, SCSS, gulp-v4. Video layout, layout in my own way.",
   "url": "https://www.youtube.com/watch?v=RpWC7b83tTc",
   "scripts": {
     "deploy": "gh-pages -d dist"

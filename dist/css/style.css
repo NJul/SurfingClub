@@ -1,17 +1,192 @@
-.bg {
-    height: 100vh;
+@charset "UTF-8";
+/*
+Media query manager
+
+0 - 600px: Phone
+600 - 900px: Tablet portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + : Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+600px / 16px = 37.5em
+*/
+html {
+    font-size: 62.5%;
+  /*   @include respond(phone) {
+    font-size: 50%;
+  }
+
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%;
+    // 1rem = 9px, 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16
+  } */
+}
+
+body {
+    background: url("../images/bg/bg-lines.png") repeat-y center center;
+    background-size: initial;
+    font-size: 1.6rem;
+}
+
+/* .u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem;
+} */
+/*
+$primary-color: #0b0c11;
+$secondary-color: #8f8f8f;
+$color-third: rgba(93, 168, 239, 0.9);
+$color-white: #fff;
+$color-black: #000;
+*/
+.slider-my {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  /* Выровняем наши элементы по концу оси. */
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.slider-my__descr {
+    /* Ширина для текстового блока в слайдере */
+    width: 500px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    /* Пододвинет блок вверх на 50% его высоты, выровняв таким образом его четко по центру. */
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.slider-my__heading {
+    margin-bottom: 24px;
+    padding-top: 20px;
+    font-family: "Playfair Display Bold";
+    font-size: 62px;
+    font-weight: bold;
+    line-height: 1.03;
+    letter-spacing: normal;
+    color: #0b0c11;
+    text-shadow: 0px 3px 35px rgba(0, 0, 0, 0.39);
+}
+
+.slider-my__heading span {
+    display: block;
+    margin-bottom: 26px;
+    text-transform: uppercase;
+    font-family: "League Spartan Bold";
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 5.4px;
+    color: rgba(93, 168, 239, 0.9);
+}
+
+.slider-my__text {
+    width: 390px;
+    font-family: "Poppins Light";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71;
+    letter-spacing: 0.4px;
+    color: #8f8f8f;
+}
+
+.slider-my__img {
+    /* Определяем точный размер картинки */
+    width: 1016px;
+    height: 572px;
+}
+
+.slider-my__img--bg-1 {
     background: url("../images/img/img-header.jpg") no-repeat center center;
     background-size: cover;
 }
 
-h1 {
-    padding-top: 20px;
-    font-family: 'Playfair Display Bold';
-    text-shadow: 0px 3px 35px #dfe6f1;
-    font-size: 40px;
+.container {
+    width: 1224px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header .navigation-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 128px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.header .logo {
+    margin-right: 190px;
+}
+
+.header .navigation {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.header .navigation__item {
+    /* &:last-child {
+        margin-right: 0;
+      } */
+}
+
+.header .navigation__item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.header .navigation__link {
+    text-decoration: none;
+    font-family: "League Spartan Bold";
+    font-size: 9px;
     font-weight: bold;
-    line-height: 1.03;
-    letter-spacing: normal;
-    text-align: center;
-    color: rgba(233, 251, 255, 0.75);
+    text-transform: uppercase;
+    color: rgba(11, 12, 17, 0.9);
+    line-height: 7.33;
+    letter-spacing: 5.6px;
 }

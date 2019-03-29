@@ -36,7 +36,7 @@ var path = {
   src: {
     html: "src/*.{html,php}",
     js: ["src/js/scripts.js"],
-    css: ["src/css/reset.css", "src/css/fonts.css", "src/scss/style.scss"],
+    css: ["src/css/reset.css", "src/css/bootstrap-reboot.min.css", "src/css/fonts.css", "src/scss/style.scss"],
     images: "src/images/**/*.{jpg,png,svg,gif,ico}",
     fonts: "src/fonts/**/*.{otf,eot,svg,ttf,woff,woff2}"
   },

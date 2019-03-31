@@ -4,68 +4,111 @@ $secondary-color: #8f8f8f;
 $color-third: rgba(93, 168, 239, 0.9);
 $color-white: #fff;
 $color-black: #000;
+$color-slider-my-controls-active: #5da8ef;
+$color-slider-my-controls-from: #ebebeb;
+$color-slider-my-controls-total: #262626;
 */
 
-.slider-my {
+.slider-my-wrapper {
   position: relative;
-  display: flex;
-  /* Выровняем наши элементы по концу оси. */
-  justify-content: flex-end;
 
-  &__descr {
-    /* Ширина для текстового блока в слайдере */
-    width: 500px;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    /* Пододвинет блок вверх на 50% его высоты, выровняв таким образом его четко по центру. */
-    transform: translateY(-50%);
-  }
+  .slider-my {
+    position: relative;
+    display: flex;
+    /* Выровняем наши элементы по концу оси. */
+    justify-content: flex-end;
 
-  &__heading {
-    margin-bottom: 24px;
-    padding-top: 20px;
-    font-family: $font-primary;
-    font-size: 62px;
-    font-weight: bold;
-    line-height: 1.03;
-    letter-spacing: normal;
-    color: $primary-color;
-    text-shadow: 0px 3px 35px rgba(0, 0, 0, 0.39);
+    &__descr {
+      /* Ширина для текстового блока в слайдере */
+      width: 500px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      /* Пододвинет блок вверх на 50% его высоты, выровняв таким образом его четко по центру. */
+      transform: translateY(-50%);
+    }
 
-    span {
-      display: block;
-      margin-bottom: 26px;
-      text-transform: uppercase;
-      font-family: $font-third;
-      font-size: 9px;
+    &__heading {
+      margin-bottom: 24px;
+      padding-top: 20px;
+      font-family: $font-primary;
+      font-size: 62px;
       font-weight: bold;
-      line-height: 1;
-      letter-spacing: 5.4px;
-      color: $color-third;
+      line-height: 1.03;
+      letter-spacing: normal;
+      color: $primary-color;
+      text-shadow: 0px 3px 35px rgba(0, 0, 0, 0.39);
+
+      span {
+        display: block;
+        margin-bottom: 26px;
+        text-transform: uppercase;
+        font-family: $font-third;
+        font-size: 9px;
+        font-weight: bold;
+        line-height: 1;
+        letter-spacing: 5.4px;
+        color: $color-third;
+      }
+    }
+
+    &__text {
+      width: 390px;
+      font-family: $font-fifth;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.71;
+      letter-spacing: 0.4px;
+      color: $secondary-color;
+
+      p {}
+    }
+
+    &__img {
+      /* Определяем точный размер картинки */
+      width: 1016px;
+      height: 572px;
+
+      &--bg-1 {
+        background: url('../images/img/img-header.jpg') no-repeat center center;
+        background-size: cover;
+        box-shadow: -16px 25px 65px rgba(19, 20, 24, 0.2);
+      }
     }
   }
 
-  &__text {
-    width: 390px;
-    font-family: $font-fifth;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.71;
-    letter-spacing: 0.4px;
-    color: $secondary-color;
+  .slider-my-controls {
+    position: absolute;
+    width: 81px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1;
 
-    p {}
+    &__left {}
+
+    &__right {}
   }
 
-  &__img {
-    /* Определяем точный размер картинки */
-    width: 1016px;
-    height: 572px;
+  .slider-my-controls-number {
+    font-family: $font-third;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1;
 
-    &--bg-1 {
-      background: url('../images/img/img-header.jpg') no-repeat center center;
-      background-size: cover;
+    letter-spacing: 1px;
+    text-align: center;
+
+    &__active {
+      color: $color-slider-my-controls-active;
+    }
+
+    &__from {
+      color: $color-slider-my-controls-from;
+    }
+
+    &__total {
+      color: $color-slider-my-controls-total;
     }
   }
 }

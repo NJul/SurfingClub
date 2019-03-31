@@ -38,4 +38,65 @@
       letter-spacing: 5.6px;
     }
   }
+
+  .site-descr {
+    position: absolute;
+    /* Выносим его за контейнер */
+    top: 58px;
+    right: -50px;
+
+    /* Красный квадрат, чтобы во время верстки видно было, как споцизионирован элемент */
+    /* 
+    width: 12px;
+    height: 12px;
+    background-color: red; 
+    */
+
+    &__content {
+      transform: rotate(-90deg) translate(-100%, 0);
+      /* чтобы контент занял ту ширину, что ему необходимо: */
+      position: absolute;
+      left: 0;
+      top: 0;
+      /* точка трансформации, относительно которой крутится объект при rotate */
+      transform-origin: left top;
+
+      font-family: $font-third;
+      font-size: 9px;
+      font-weight: bold;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 5.4px;
+      color: rgba(11, 12, 17, 0.2);
+    }
+  }
+
+  /* Иконки социальных сетей */
+  &-social {
+    position: absolute;
+    right: -60px;
+    /* Отступ снизу 0 */
+    bottom: 0;
+    width: 20px;
+
+    /* Будем центрировать с помощью флексов */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    /* Красный квадрат */
+    /*  
+    height: 150px;
+    background-color: red; 
+    */
+
+    &__item {
+
+      /* Задаем margin-bottom: 34px; кроме последнего элемента */
+      &:not(:last-child) {
+        margin-bottom: 34px;
+      }
+    }
+  }
 }

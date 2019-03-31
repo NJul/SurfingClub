@@ -47,6 +47,10 @@ body {
     font-size: 1.6rem;
 }
 
+.relative {
+    position: relative;
+}
+
 /* .u-center-text {
   text-align: center;
 }
@@ -62,85 +66,14 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem;
 } */
-/*
-$primary-color: #0b0c11;
-$secondary-color: #8f8f8f;
-$color-third: rgba(93, 168, 239, 0.9);
-$color-white: #fff;
-$color-black: #000;
-*/
-.slider-my {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  /* Выровняем наши элементы по концу оси. */
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-}
-
-.slider-my__descr {
-    /* Ширина для текстового блока в слайдере */
-    width: 500px;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    /* Пододвинет блок вверх на 50% его высоты, выровняв таким образом его четко по центру. */
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.slider-my__heading {
-    margin-bottom: 24px;
-    padding-top: 20px;
-    font-family: "Playfair Display Bold";
-    font-size: 62px;
-    font-weight: bold;
-    line-height: 1.03;
-    letter-spacing: normal;
-    color: #0b0c11;
-    text-shadow: 0px 3px 35px rgba(0, 0, 0, 0.39);
-}
-
-.slider-my__heading span {
-    display: block;
-    margin-bottom: 26px;
-    text-transform: uppercase;
-    font-family: "League Spartan Bold";
-    font-size: 9px;
-    font-weight: bold;
-    line-height: 1;
-    letter-spacing: 5.4px;
-    color: rgba(93, 168, 239, 0.9);
-}
-
-.slider-my__text {
-    width: 390px;
-    font-family: "Poppins Light";
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.71;
-    letter-spacing: 0.4px;
-    color: #8f8f8f;
-}
-
-.slider-my__img {
-    /* Определяем точный размер картинки */
-    width: 1016px;
-    height: 572px;
-}
-
-.slider-my__img--bg-1 {
-    background: url("../images/img/img-header.jpg") no-repeat center center;
-    background-size: cover;
-}
-
 .container {
     width: 1224px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.header {
+  /* Иконки социальных сетей */
 }
 
 .header .navigation-wrapper {
@@ -171,7 +104,7 @@ $color-black: #000;
 }
 
 .header .navigation__item {
-    /* &:last-child {
+      /* &:last-child {
         margin-right: 0;
       } */
 }
@@ -189,4 +122,193 @@ $color-black: #000;
     color: rgba(11, 12, 17, 0.9);
     line-height: 7.33;
     letter-spacing: 5.6px;
+}
+
+.header .site-descr {
+    position: absolute;
+    /* Выносим его за контейнер */
+    top: 58px;
+    right: -50px;
+    /* Красный квадрат, чтобы во время верстки видно было, как споцизионирован элемент */
+    /* 
+    width: 12px;
+    height: 12px;
+    background-color: red; 
+    */
+}
+
+.header .site-descr__content {
+    -webkit-transform: rotate(-90deg) translate(-100%, 0);
+    -ms-transform: rotate(-90deg) translate(-100%, 0);
+    transform: rotate(-90deg) translate(-100%, 0);
+      /* чтобы контент занял ту ширину, что ему необходимо: */
+    position: absolute;
+    left: 0;
+    top: 0;
+      /* точка трансформации, относительно которой крутится объект при rotate */
+    -webkit-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+    font-family: "League Spartan Bold";
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 5.4px;
+    color: rgba(11, 12, 17, 0.2);
+}
+
+.header-social {
+    position: absolute;
+    right: -60px;
+    /* Отступ снизу 0 */
+    bottom: 0;
+    width: 20px;
+    /* Будем центрировать с помощью флексов */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /* Красный квадрат */
+    /*  
+    height: 150px;
+    background-color: red; 
+    */
+}
+
+.header-social__item {
+      /* Задаем margin-bottom: 34px; кроме последнего элемента */
+}
+
+.header-social__item:not(:last-child) {
+    margin-bottom: 34px;
+}
+
+/*
+$primary-color: #0b0c11;
+$secondary-color: #8f8f8f;
+$color-third: rgba(93, 168, 239, 0.9);
+$color-white: #fff;
+$color-black: #000;
+$color-slider-my-controls-active: #5da8ef;
+$color-slider-my-controls-from: #ebebeb;
+$color-slider-my-controls-total: #262626;
+*/
+.slider-my-wrapper {
+    position: relative;
+}
+
+.slider-my-wrapper .slider-my {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* Выровняем наши элементы по концу оси. */
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.slider-my-wrapper .slider-my__descr {
+      /* Ширина для текстового блока в слайдере */
+    width: 500px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+      /* Пододвинет блок вверх на 50% его высоты, выровняв таким образом его четко по центру. */
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.slider-my-wrapper .slider-my__heading {
+    margin-bottom: 24px;
+    padding-top: 20px;
+    font-family: "Playfair Display Bold";
+    font-size: 62px;
+    font-weight: bold;
+    line-height: 1.03;
+    letter-spacing: normal;
+    color: #0b0c11;
+    text-shadow: 0px 3px 35px rgba(0, 0, 0, 0.39);
+}
+
+.slider-my-wrapper .slider-my__heading span {
+    display: block;
+    margin-bottom: 26px;
+    text-transform: uppercase;
+    font-family: "League Spartan Bold";
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 5.4px;
+    color: rgba(93, 168, 239, 0.9);
+}
+
+.slider-my-wrapper .slider-my__text {
+    width: 390px;
+    font-family: "Poppins Light";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71;
+    letter-spacing: 0.4px;
+    color: #8f8f8f;
+}
+
+.slider-my-wrapper .slider-my__img {
+      /* Определяем точный размер картинки */
+    width: 1016px;
+    height: 572px;
+}
+
+.slider-my-wrapper .slider-my__img--bg-1 {
+    background: url("../images/img/img-header.jpg") no-repeat center center;
+    background-size: cover;
+    -webkit-box-shadow: -16px 25px 65px rgba(19, 20, 24, 0.2);
+    box-shadow: -16px 25px 65px rgba(19, 20, 24, 0.2);
+}
+
+.slider-my-wrapper .slider-my-controls {
+    position: absolute;
+    width: 81px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    line-height: 1;
+}
+
+.slider-my-wrapper .slider-my-controls-number {
+    font-family: "League Spartan Bold";
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.slider-my-wrapper .slider-my-controls-number__active {
+    color: #5da8ef;
+}
+
+.slider-my-wrapper .slider-my-controls-number__from {
+    color: #ebebeb;
+}
+
+.slider-my-wrapper .slider-my-controls-number__total {
+    color: #262626;
 }

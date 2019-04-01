@@ -10,94 +10,136 @@
 </head>
 
 <body>
-  <header id="header" class="header">
+  <header id="header" class="header container">
     <!-- container -->
-    <div class="container relative">
-      <nav class="navigation-wrapper">
-        <a href="#">
-          <div class="logo">
-            <img src="images/logo/logo.svg" alt="Surfing Club" />
-          </div>
-        </a>
 
-        <ul class="navigation">
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Stories</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Events</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Places</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Boards</a>
-          </li>
-        </ul>
-      </nav>
-
-      <!-- В обертке slider-my-wrapper будут распологаться наши слайды, пока что у нас только один слайд. -->
-      <div class="slider-my-wrapper">
-        <!-- slider-my -->
-        <!-- slides, один конкретный слайд -->
-        <div class="slider-my">
-          <div class="slider-my__descr">
-            <div class="slider-my__heading">
-              <span>Your</span>
-              <h2>Beautiful Escape</h2>
-            </div>
-            <div class="slider-my__text">
-              <p>
-                One of the greatest things about the sport of surfing is that
-                you need only three things: your body, a surfboard, and a
-                wave.
-              </p>
-            </div>
-          </div>
-          <div class="slider-my__img slider-my__img--bg-1"></div>
+    <nav class="navigation-wrapper">
+      <a href="#">
+        <div class="logo">
+          <img src="images/logo/logo.svg" alt="Surfing Club" />
         </div>
-        <!-- slides controls -->
-        <div class="slider-my-controls">
-          <a class="slider-my-controls__left" href="#">
-            <img src="images/controls/header-slider-left.svg" alt="Left" />
-          </a>
+      </a>
 
-          <!-- slider-my-controls-number отдельный блок, а не элемент -->
-          <div class="slider-my-controls-number">
-            <span class="slider-my-controls-number__active">1</span>
-            <span class="slider-my-controls-number__from">/</span>
-            <span class="slider-my-controls-number__total">5</span>
+      <ul class="navigation">
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Stories</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Events</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Places</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Boards</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- В обертке slider-my-wrapper будут распологаться наши слайды, пока что у нас только один слайд. -->
+    <div class="slider-my-wrapper">
+      <!-- slider-my -->
+      <!-- slides, один конкретный слайд -->
+      <div class="slider-my">
+        <div class="slider-my__descr">
+          <div class="slider-my__heading">
+            <span>Your</span>
+            <h2>Beautiful Escape</h2>
           </div>
-
-          <a class="slider-my-controls__right" href="#">
-            <img src="images/controls/header-slider-right.svg" alt="Right" />
-          </a>
+          <div class="slider-my__text">
+            <p>
+              One of the greatest things about the sport of surfing is that
+              you need only three things: your body, a surfboard, and a wave.
+            </p>
+          </div>
         </div>
-        <!-- // slider-my -->
+        <div class="slider-my__img slider-my__img--bg-1"></div>
       </div>
+      <!-- slides controls -->
+      <div class="slider-my-controls">
+        <a class="slider-my-controls__left" href="#">
+          <img src="images/controls/header-slider-left.svg" alt="Left" />
+        </a>
 
+        <!-- slider-my-controls-number отдельный блок, а не элемент -->
+        <div class="slider-my-controls-number">
+          <span class="slider-my-controls-number__active">1</span>
+          <span class="slider-my-controls-number__from">/</span>
+          <span class="slider-my-controls-number__total">5</span>
+        </div>
 
-      <!-- чтобы изначально красный квадтрат был спозиционирован -->
-      <div class="site-descr">
-        <!-- а текст был просто внути него -->
-        <div class="site-descr__content">First&nbsp;Surfing&nbsp;Magazine</div>
+        <a class="slider-my-controls__right" href="#">
+          <img src="images/controls/header-slider-right.svg" alt="Right" />
+        </a>
       </div>
+      <!-- // slider-my -->
+    </div>
 
-      <div class="header-social">
-        <a href="#" class="header-social__item">
-          <img src="images/socials/social-tumblr.svg" alt="Tumblr">
-        </a>
-        <a href="#" class="header-social__item">
-          <img src="images/socials/social-twitter.svg" alt="Twitter">
-        </a>
-        <a href="#" class="header-social__item">
-          <img src="images/socials/social-vimeo.svg" alt="Vimeo">
-        </a>
+    <!-- чтобы изначально красный квадтрат был спозиционирован -->
+    <div class="site-descr">
+      <!-- а текст был просто внути него -->
+      <div class="site-descr__content">
+        First&nbsp;Surfing&nbsp;Magazine
       </div>
     </div>
+
+    <div class="header-social">
+      <a href="#" class="header-social__item">
+        <img src="images/socials/social-tumblr.svg" alt="Tumblr" />
+      </a>
+      <a href="#" class="header-social__item">
+        <img src="images/socials/social-twitter.svg" alt="Twitter" />
+      </a>
+      <a href="#" class="header-social__item">
+        <img src="images/socials/social-vimeo.svg" alt="Vimeo" />
+      </a>
+    </div>
+
     <!-- // container -->
   </header>
-  <main></main>
+  <main>
+    <section class="quote">
+      <div class="quote-wrapper">
+        <div class="quote__text">
+          <h4>
+            Surfing is the most blissful experience you can have on this
+            planet, a taste of heaven.
+          </h4>
+        </div>
+        <div class="quote__author">
+          John McCarthy
+        </div>
+      </div>
+    </section>
+
+    <section class="club-description">
+      <div class="container relative">
+
+        <div class="club-description-wrapper">
+          <div class="club-description__img">
+            <img src="images/img/img-2.jpg" alt="Picture" />
+          </div>
+          <!-- div ниже больше похож на блок, чем на элемент, потому что внутри него будут еще свои блоки -->
+          <div class="club-description-video">
+            <img src="images/img/img-3.jpg" alt="Video" />
+            <div class="club-description-video__control">
+              <img src="images/controls/control-play.svg" alt="Play">
+            </div>
+          </div>
+          <div class="club-description__text">
+            <p>
+              By better understanding the various aspects of surfing, you will
+              improve faster and have more fun in the water.
+            </p>
+          </div>
+          <div class="club-description__link">
+            <a href="#" class="read-more-link">Read More</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
   <footer></footer>
   <script src="js/all.min.js"></script>
 </body>

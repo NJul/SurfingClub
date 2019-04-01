@@ -1,0 +1,55 @@
+/*
+$primary-color: #0b0c11;
+$secondary-color: #8f8f8f;
+$color-third: rgba(93, 168, 239, 0.9);
+$color-white: #fff;
+$color-black: #000;
+$color-slider-my-controls-active: #5da8ef;
+$color-slider-my-controls-from: #ebebeb;
+$color-slider-my-controls-total: #262626;
+$color-line: #78a6ec;
+*/
+
+.quote {
+  padding-top: 95px;
+  padding-bottom: 110px;
+
+  &-wrapper {
+    position: relative;
+    width: 610px;
+    margin: 0 auto;
+    text-align: center;
+
+    &:after {
+      content: "";
+      width: 2px;
+      height: 100px;
+      background-color: $color-line;
+      position: absolute;
+      bottom: -58px;
+      /* Размещаем линию точно по центру */
+      left: 50%;
+      transform: translate(-50%, 100%);
+    }
+  }
+
+  &__text h4 {
+    margin-bottom: 30px;
+    font-family: $font-secondary;
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 1.46;
+    letter-spacing: 0.3px;
+    color: rgba(54, 54, 54, 0.9);
+  }
+
+  &__author {
+    font-family: $font-third;
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 1.46;
+    text-transform: uppercase;
+    letter-spacing: 5.4px;
+    color: rgba(54, 54, 54, 0.9);
+  }
+}

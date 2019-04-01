@@ -1,0 +1,68 @@
+/*
+$primary-color: #0b0c11;
+$secondary-color: #8f8f8f;
+$color-third: rgba(93, 168, 239, 0.9);
+$color-white: #fff;
+$color-black: #000;
+$color-slider-my-controls-active: #5da8ef;
+$color-slider-my-controls-from: #ebebeb;
+$color-slider-my-controls-total: #262626;
+$color-line: #78a6ec;
+*/
+
+.club-description {
+  padding-top: 110px;
+
+  .club-description-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {}
+
+  &-video {
+    position: absolute;
+    right: 0;
+    top: 43px;
+    z-index: 1;
+
+    &__control {
+      position: absolute;
+      /* по центру */
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 68px;
+      height: 68px;
+      box-shadow: -2.1px -2.1px 35px 0 rgba(0, 0, 0, 0.13);
+      background-color: $color-line;
+      border-radius: 60px;
+
+      img {
+        position: absolute;
+        /* по центру */
+        top: 50%;
+        left: 50%;
+        transform: translate(-35%, -50%);
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 60px;
+    margin-left: 115px;
+    width: 336px;
+    font-family: $font-fifth;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71;
+    letter-spacing: 0.4px;
+    color: rgba(97, 97, 97, 0.65);
+    margin-bottom: 45px;
+  }
+
+  &__link {
+    margin-left: 115px;
+  }
+}

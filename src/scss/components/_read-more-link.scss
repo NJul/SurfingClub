@@ -1,0 +1,40 @@
+/*
+$primary-color: #0b0c11;
+$secondary-color: #8f8f8f;
+$color-third: rgba(93, 168, 239, 0.9);
+$color-white: #fff;
+$color-black: #000;
+$color-slider-my-controls-active: #5da8ef;
+$color-slider-my-controls-from: #ebebeb;
+$color-slider-my-controls-total: #262626;
+$color-line: #78a6ec;
+$color-read-more-link: #363636;
+*/
+
+.read-more-link,
+a.read-more-link {
+  position: relative;
+  font-family: $font-third;
+  font-size: 9px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1;
+  letter-spacing: 5.4px;
+  color: $color-read-more-link;
+  padding-bottom: 10px;
+  display: inline-block;
+
+  &:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    width: 99px;
+    height: 2px;
+    background-color: $color-slider-my-controls-active;
+    opacity: 0.7;
+    background-image: linear-gradient(to bottom, $color-line, $color-line), linear-gradient(to bottom, $color-white, $color-white);
+  }
+}

@@ -45,27 +45,13 @@ body {
     background: url("../images/bg/bg-lines.png") repeat-y center center;
     background-size: initial;
     font-size: 1.6rem;
+    margin-bottom: 500px;
 }
 
 .relative {
     position: relative;
 }
 
-/* .u-center-text {
-  text-align: center;
-}
-
-.u-margin-bottom-small {
-  margin-bottom: 1.5rem;
-}
-
-.u-margin-bottom-medium {
-  margin-bottom: 4rem;
-}
-
-.u-margin-bottom-big {
-  margin-bottom: 8rem;
-} */
 .container {
     width: 1224px;
     margin-left: auto;
@@ -73,6 +59,8 @@ body {
 }
 
 .header {
+    position: relative;
+    margin-bottom: 95px;
   /* Иконки социальных сетей */
 }
 
@@ -311,4 +299,181 @@ $color-slider-my-controls-total: #262626;
 
 .slider-my-wrapper .slider-my-controls-number__total {
     color: #262626;
+}
+
+/*
+$primary-color: #0b0c11;
+$secondary-color: #8f8f8f;
+$color-third: rgba(93, 168, 239, 0.9);
+$color-white: #fff;
+$color-black: #000;
+$color-slider-my-controls-active: #5da8ef;
+$color-slider-my-controls-from: #ebebeb;
+$color-slider-my-controls-total: #262626;
+$color-line: #78a6ec;
+$color-read-more-link: #363636;
+*/
+.read-more-link,
+a.read-more-link {
+    position: relative;
+    font-family: "League Spartan Bold";
+    font-size: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1;
+    letter-spacing: 5.4px;
+    color: #363636;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.read-more-link:after,
+  a.read-more-link:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    width: 99px;
+    height: 2px;
+    background-color: #5da8ef;
+    opacity: 0.7;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#78a6ec), to(#78a6ec)), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+    background-image: -webkit-linear-gradient(top, #78a6ec, #78a6ec), -webkit-linear-gradient(top, #fff, #fff);
+    background-image: -o-linear-gradient(top, #78a6ec, #78a6ec), -o-linear-gradient(top, #fff, #fff);
+    background-image: linear-gradient(to bottom, #78a6ec, #78a6ec), linear-gradient(to bottom, #fff, #fff);
+}
+
+/*
+$primary-color: #0b0c11;
+$secondary-color: #8f8f8f;
+$color-third: rgba(93, 168, 239, 0.9);
+$color-white: #fff;
+$color-black: #000;
+$color-slider-my-controls-active: #5da8ef;
+$color-slider-my-controls-from: #ebebeb;
+$color-slider-my-controls-total: #262626;
+$color-line: #78a6ec;
+*/
+.quote {
+    padding-top: 95px;
+    padding-bottom: 110px;
+}
+
+.quote-wrapper {
+    position: relative;
+    width: 610px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.quote-wrapper:after {
+    content: "";
+    width: 2px;
+    height: 100px;
+    background-color: #78a6ec;
+    position: absolute;
+    bottom: -58px;
+      /* Размещаем линию точно по центру */
+    left: 50%;
+    -webkit-transform: translate(-50%, 100%);
+    -ms-transform: translate(-50%, 100%);
+    transform: translate(-50%, 100%);
+}
+
+.quote__text h4 {
+    margin-bottom: 30px;
+    font-family: "Playfair Display Regular";
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 1.46;
+    letter-spacing: 0.3px;
+    color: rgba(54, 54, 54, 0.9);
+}
+
+.quote__author {
+    font-family: "League Spartan Bold";
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 1.46;
+    text-transform: uppercase;
+    letter-spacing: 5.4px;
+    color: rgba(54, 54, 54, 0.9);
+}
+
+/*
+$primary-color: #0b0c11;
+$secondary-color: #8f8f8f;
+$color-third: rgba(93, 168, 239, 0.9);
+$color-white: #fff;
+$color-black: #000;
+$color-slider-my-controls-active: #5da8ef;
+$color-slider-my-controls-from: #ebebeb;
+$color-slider-my-controls-total: #262626;
+$color-line: #78a6ec;
+*/
+.club-description {
+    padding-top: 110px;
+}
+
+.club-description .club-description-wrapper {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.club-description-video {
+    position: absolute;
+    right: 0;
+    top: 43px;
+    z-index: 1;
+}
+
+.club-description-video__control {
+    position: absolute;
+      /* по центру */
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 68px;
+    height: 68px;
+    -webkit-box-shadow: -2.1px -2.1px 35px 0 rgba(0, 0, 0, 0.13);
+    box-shadow: -2.1px -2.1px 35px 0 rgba(0, 0, 0, 0.13);
+    background-color: #78a6ec;
+    border-radius: 60px;
+}
+
+.club-description-video__control img {
+    position: absolute;
+        /* по центру */
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-35%, -50%);
+    -ms-transform: translate(-35%, -50%);
+    transform: translate(-35%, -50%);
+}
+
+.club-description__text {
+    margin-top: 60px;
+    margin-left: 115px;
+    width: 336px;
+    font-family: "Poppins Light";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71;
+    letter-spacing: 0.4px;
+    color: rgba(97, 97, 97, 0.65);
+    margin-bottom: 45px;
+}
+
+.club-description__link {
+    margin-left: 115px;
 }

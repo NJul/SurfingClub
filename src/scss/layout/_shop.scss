@@ -1,0 +1,116 @@
+/*
+$primary-color: #0b0c11;
+$secondary-color: #8f8f8f;
+$color-third: rgba(93, 168, 239, 0.9);
+$color-slider-my-controls-active: #5da8ef;
+$color-slider-my-controls-from: #ebebeb;
+$color-slider-my-controls-total: #262626;
+$color-line: #78a6ec;
+$color-read-more-link: #363636;
+$color-title: #333333;
+$color-category: #7a7a7a;
+$color-price: #ce60a8;
+$color-bg-img-holder: #ececec;
+
+$color-white: #fff;
+$color-black: #000;
+*/
+
+.shop {
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+
+.shop-slider {
+  display: flex;
+  justify-content: space-between;
+  // background-color: #858585;
+  // height: 200px;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+/* Слайдер с бордами */
+.board {
+  position: relative;
+  width: 350px;
+  height: 433px;
+  // margin-right: 85px;
+  // background-color: #424040;
+
+  &__img-holder {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    height: 320px;
+    background-color: $color-bg-img-holder;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    /* По X на -50%, по Y 0. Центрируем борд. */
+    transform: translate(-50%, 0);
+  }
+
+  /* Это блок, с четырьмя линиями текста ниже. Первая буква заголовка всегда начинается в одном и том же месте. То есть заголовок выравнивается не по правому краю. */
+  &-descr {
+    width: 210px;
+    // background-color: #ecb8b8;
+    position: absolute;
+    top: 196px;
+    left: 216px;
+  }
+
+  &__category {
+    font-family: $font-fifth;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    color: $color-category;
+  }
+
+  &__title {
+    font-family: $font-secondary;
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 1.08;
+    letter-spacing: 0.3px;
+    color: $color-title;
+  }
+
+  &-buy {
+    margin-top: 38px;
+    margin-left: 55px;
+
+    &__price {
+      font-family: $font-fifth;
+      font-size: 20px;
+      font-weight: 300;
+      font-style: normal;
+      letter-spacing: -0.1px;
+      color: $color-price;
+      margin-bottom: 3px;
+    }
+
+    &__link {
+      font-family: $font-third;
+      font-size: 9px;
+      font-weight: bold;
+      font-style: normal;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 5.4px;
+      color: $color-title;
+      margin-left: 4px;
+    }
+  }
+}
+
+.shop-link-wrapper {
+  display: flex;
+  justify-content: center;
+}

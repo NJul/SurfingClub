@@ -7,6 +7,8 @@ $color-black: #000;
 $color-slider-my-controls-active: #5da8ef;
 $color-slider-my-controls-from: #ebebeb;
 $color-slider-my-controls-total: #262626;
+$color-line: #78a6ec;
+$color-read-more-link: #363636;
 */
 
 .slider-my-wrapper {
@@ -17,6 +19,10 @@ $color-slider-my-controls-total: #262626;
     display: flex;
     /* Выровняем наши элементы по концу оси. */
     justify-content: flex-end;
+
+    .subtitle {
+      margin-bottom: 26px;
+    }
 
     &__descr {
       /* Ширина для текстового блока в слайдере */
@@ -38,18 +44,6 @@ $color-slider-my-controls-total: #262626;
       letter-spacing: normal;
       color: $primary-color;
       text-shadow: 0px 3px 35px rgba(0, 0, 0, 0.39);
-
-      span {
-        display: block;
-        margin-bottom: 26px;
-        text-transform: uppercase;
-        font-family: $font-third;
-        font-size: 9px;
-        font-weight: bold;
-        line-height: 1;
-        letter-spacing: 5.4px;
-        color: $color-third;
-      }
     }
 
     &__text {

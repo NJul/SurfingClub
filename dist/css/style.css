@@ -45,11 +45,192 @@ body {
     background: url("../images/bg/bg-lines.png") repeat-y center center;
     background-size: initial;
     font-size: 1.6rem;
-    margin-bottom: 500px;
 }
 
 .relative {
     position: relative;
+}
+
+/*
+$primary-color: #0b0c11;
+$secondary-color: #8f8f8f;
+$color-third: rgba(93, 168, 239, 0.9);
+$color-white: #fff;
+$color-black: #000;
+$color-slider-my-controls-active: #5da8ef;
+$color-slider-my-controls-from: #ebebeb;
+$color-slider-my-controls-total: #262626;
+$color-line: #78a6ec;
+$color-read-more-link: #363636;
+*/
+.slider-my-wrapper {
+    position: relative;
+}
+
+.slider-my-wrapper .slider-my {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* Выровняем наши элементы по концу оси. */
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.slider-my-wrapper .slider-my .subtitle {
+    margin-bottom: 26px;
+}
+
+.slider-my-wrapper .slider-my__descr {
+      /* Ширина для текстового блока в слайдере */
+    width: 500px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+      /* Пододвинет блок вверх на 50% его высоты, выровняв таким образом его четко по центру. */
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.slider-my-wrapper .slider-my__heading {
+    margin-bottom: 24px;
+    padding-top: 20px;
+    font-family: "Playfair Display Bold";
+    font-size: 62px;
+    font-weight: bold;
+    line-height: 1.03;
+    letter-spacing: normal;
+    color: #0b0c11;
+    text-shadow: 0px 3px 35px rgba(0, 0, 0, 0.39);
+}
+
+.slider-my-wrapper .slider-my__text {
+    width: 390px;
+    font-family: "Poppins Light";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71;
+    letter-spacing: 0.4px;
+    color: #8f8f8f;
+}
+
+.slider-my-wrapper .slider-my__img {
+      /* Определяем точный размер картинки */
+    width: 1016px;
+    height: 572px;
+}
+
+.slider-my-wrapper .slider-my__img--bg-1 {
+    background: url("../images/img/img-header.jpg") no-repeat center center;
+    background-size: cover;
+    -webkit-box-shadow: -16px 25px 65px rgba(19, 20, 24, 0.2);
+    box-shadow: -16px 25px 65px rgba(19, 20, 24, 0.2);
+}
+
+.slider-my-wrapper .slider-my-controls {
+    position: absolute;
+    width: 81px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    line-height: 1;
+}
+
+.slider-my-wrapper .slider-my-controls-number {
+    font-family: "League Spartan Bold";
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.slider-my-wrapper .slider-my-controls-number__active {
+    color: #5da8ef;
+}
+
+.slider-my-wrapper .slider-my-controls-number__from {
+    color: #ebebeb;
+}
+
+.slider-my-wrapper .slider-my-controls-number__total {
+    color: #262626;
+}
+
+/*
+$primary-color: #0b0c11;
+$secondary-color: #8f8f8f;
+$color-third: rgba(93, 168, 239, 0.9);
+$color-white: #fff;
+$color-black: #000;
+$color-slider-my-controls-active: #5da8ef;
+$color-slider-my-controls-from: #ebebeb;
+$color-slider-my-controls-total: #262626;
+$color-line: #78a6ec;
+$color-read-more-link: #363636;
+*/
+.read-more-link,
+a.read-more-link {
+    position: relative;
+    font-family: "League Spartan Bold";
+    font-size: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1;
+    letter-spacing: 5.4px;
+    color: #363636;
+  /* Зададим padding-bottom, чтобы не было пустого пространства между текстом и линией, а все вместе вело себя, как ссылка. */
+    padding-bottom: 10px;
+    display: inline-block;
+  /* Сделаем линию подчеркивания ссылки через псевдоэлемент :after */
+}
+
+.read-more-link:after,
+  a.read-more-link:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #5da8ef;
+    opacity: 0.7;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#78a6ec), to(#78a6ec)), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+    background-image: -webkit-linear-gradient(top, #78a6ec, #78a6ec), -webkit-linear-gradient(top, #fff, #fff);
+    background-image: -o-linear-gradient(top, #78a6ec, #78a6ec), -o-linear-gradient(top, #fff, #fff);
+    background-image: linear-gradient(to bottom, #78a6ec, #78a6ec), linear-gradient(to bottom, #fff, #fff);
+    /* Делаем синюю люинию справа немного короче, чтобы не выделялся последний  letter-spacing: 5.4px; */
+    margin: 0 5px 0 0;
+}
+
+.subtitle {
+    display: block;
+    text-transform: uppercase;
+    font-family: "League Spartan Bold";
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 5.4px;
+    color: rgba(93, 168, 239, 0.9);
+}
+
+.title {
+    font-family: "Playfair Display Bold";
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: #333333;
 }
 
 .container {
@@ -190,170 +371,6 @@ $color-black: #000;
 $color-slider-my-controls-active: #5da8ef;
 $color-slider-my-controls-from: #ebebeb;
 $color-slider-my-controls-total: #262626;
-*/
-.slider-my-wrapper {
-    position: relative;
-}
-
-.slider-my-wrapper .slider-my {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    /* Выровняем наши элементы по концу оси. */
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-}
-
-.slider-my-wrapper .slider-my__descr {
-      /* Ширина для текстового блока в слайдере */
-    width: 500px;
-    position: absolute;
-    left: 0;
-    top: 50%;
-      /* Пододвинет блок вверх на 50% его высоты, выровняв таким образом его четко по центру. */
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.slider-my-wrapper .slider-my__heading {
-    margin-bottom: 24px;
-    padding-top: 20px;
-    font-family: "Playfair Display Bold";
-    font-size: 62px;
-    font-weight: bold;
-    line-height: 1.03;
-    letter-spacing: normal;
-    color: #0b0c11;
-    text-shadow: 0px 3px 35px rgba(0, 0, 0, 0.39);
-}
-
-.slider-my-wrapper .slider-my__heading span {
-    display: block;
-    margin-bottom: 26px;
-    text-transform: uppercase;
-    font-family: "League Spartan Bold";
-    font-size: 9px;
-    font-weight: bold;
-    line-height: 1;
-    letter-spacing: 5.4px;
-    color: rgba(93, 168, 239, 0.9);
-}
-
-.slider-my-wrapper .slider-my__text {
-    width: 390px;
-    font-family: "Poppins Light";
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.71;
-    letter-spacing: 0.4px;
-    color: #8f8f8f;
-}
-
-.slider-my-wrapper .slider-my__img {
-      /* Определяем точный размер картинки */
-    width: 1016px;
-    height: 572px;
-}
-
-.slider-my-wrapper .slider-my__img--bg-1 {
-    background: url("../images/img/img-header.jpg") no-repeat center center;
-    background-size: cover;
-    -webkit-box-shadow: -16px 25px 65px rgba(19, 20, 24, 0.2);
-    box-shadow: -16px 25px 65px rgba(19, 20, 24, 0.2);
-}
-
-.slider-my-wrapper .slider-my-controls {
-    position: absolute;
-    width: 81px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    line-height: 1;
-}
-
-.slider-my-wrapper .slider-my-controls-number {
-    font-family: "League Spartan Bold";
-    font-size: 10px;
-    font-weight: bold;
-    line-height: 1;
-    letter-spacing: 1px;
-    text-align: center;
-}
-
-.slider-my-wrapper .slider-my-controls-number__active {
-    color: #5da8ef;
-}
-
-.slider-my-wrapper .slider-my-controls-number__from {
-    color: #ebebeb;
-}
-
-.slider-my-wrapper .slider-my-controls-number__total {
-    color: #262626;
-}
-
-/*
-$primary-color: #0b0c11;
-$secondary-color: #8f8f8f;
-$color-third: rgba(93, 168, 239, 0.9);
-$color-white: #fff;
-$color-black: #000;
-$color-slider-my-controls-active: #5da8ef;
-$color-slider-my-controls-from: #ebebeb;
-$color-slider-my-controls-total: #262626;
-$color-line: #78a6ec;
-$color-read-more-link: #363636;
-*/
-.read-more-link,
-a.read-more-link {
-    position: relative;
-    font-family: "League Spartan Bold";
-    font-size: 9px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    line-height: 1;
-    letter-spacing: 5.4px;
-    color: #363636;
-    padding-bottom: 10px;
-    display: inline-block;
-}
-
-.read-more-link:after,
-  a.read-more-link:after {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: "";
-    width: 99px;
-    height: 2px;
-    background-color: #5da8ef;
-    opacity: 0.7;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#78a6ec), to(#78a6ec)), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
-    background-image: -webkit-linear-gradient(top, #78a6ec, #78a6ec), -webkit-linear-gradient(top, #fff, #fff);
-    background-image: -o-linear-gradient(top, #78a6ec, #78a6ec), -o-linear-gradient(top, #fff, #fff);
-    background-image: linear-gradient(to bottom, #78a6ec, #78a6ec), linear-gradient(to bottom, #fff, #fff);
-}
-
-/*
-$primary-color: #0b0c11;
-$secondary-color: #8f8f8f;
-$color-third: rgba(93, 168, 239, 0.9);
-$color-white: #fff;
-$color-black: #000;
-$color-slider-my-controls-active: #5da8ef;
-$color-slider-my-controls-from: #ebebeb;
-$color-slider-my-controls-total: #262626;
 $color-line: #78a6ec;
 */
 .quote {
@@ -415,6 +432,9 @@ $color-line: #78a6ec;
 */
 .club-description {
     padding-top: 110px;
+  /* Расстояние между секциями 190px / 2 и прописываем рядом стоящим секциям отступы по 95px */
+    padding-bottom: 95px;
+  /* Размещаем картинку, загловок, текст в одну flex column */
 }
 
 .club-description .club-description-wrapper {
@@ -456,6 +476,7 @@ $color-line: #78a6ec;
         /* по центру */
     top: 50%;
     left: 50%;
+        /* -35% будет подходить именно для этого размера треугольнка и экрана */
     -webkit-transform: translate(-35%, -50%);
     -ms-transform: translate(-35%, -50%);
     transform: translate(-35%, -50%);
@@ -476,4 +497,125 @@ $color-line: #78a6ec;
 
 .club-description__link {
     margin-left: 115px;
+}
+
+/*
+$primary-color: #0b0c11;
+$secondary-color: #8f8f8f;
+$color-third: rgba(93, 168, 239, 0.9);
+$color-slider-my-controls-active: #5da8ef;
+$color-slider-my-controls-from: #ebebeb;
+$color-slider-my-controls-total: #262626;
+$color-line: #78a6ec;
+$color-read-more-link: #363636;
+$color-title: #333333;
+$color-category: #7a7a7a;
+$color-price: #ce60a8;
+$color-bg-img-holder: #ececec;
+
+$color-white: #fff;
+$color-black: #000;
+*/
+.shop {
+    padding-top: 95px;
+    padding-bottom: 95px;
+}
+
+.shop-slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+/* Слайдер с бордами */
+.board {
+    position: relative;
+    width: 350px;
+    height: 433px;
+  /* Это блок, с четырьмя линиями текста ниже. Первая буква заголовка всегда начинается в одном и том же месте. То есть заголовок выравнивается не по правому краю. */
+}
+
+.board__img-holder {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    height: 320px;
+    background-color: #ececec;
+}
+
+.board__img {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    /* По X на -50%, по Y 0. Центрируем борд. */
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+.board-descr {
+    width: 210px;
+    position: absolute;
+    top: 196px;
+    left: 216px;
+}
+
+.board__category {
+    font-family: "Poppins Light";
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    color: #7a7a7a;
+}
+
+.board__title {
+    font-family: "Playfair Display Regular";
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 1.08;
+    letter-spacing: 0.3px;
+    color: #333333;
+}
+
+.board-buy {
+    margin-top: 38px;
+    margin-left: 55px;
+}
+
+.board-buy__price {
+    font-family: "Poppins Light";
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: -0.1px;
+    color: #ce60a8;
+    margin-bottom: 3px;
+}
+
+.board-buy__link {
+    font-family: "League Spartan Bold";
+    font-size: 9px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 5.4px;
+    color: #333333;
+    margin-left: 4px;
+}
+
+.shop-link-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }

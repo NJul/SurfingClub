@@ -22,19 +22,22 @@ a.read-more-link {
   line-height: 1;
   letter-spacing: 5.4px;
   color: $color-read-more-link;
+  /* Зададим padding-bottom, чтобы не было пустого пространства между текстом и линией, а все вместе вело себя, как ссылка. */
   padding-bottom: 10px;
   display: inline-block;
 
+  /* Сделаем линию подчеркивания ссылки через псевдоэлемент :after */
   &:after {
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-    content: "";
-    width: 99px;
     height: 2px;
     background-color: $color-slider-my-controls-active;
     opacity: 0.7;
     background-image: linear-gradient(to bottom, $color-line, $color-line), linear-gradient(to bottom, $color-white, $color-white);
+    /* Делаем синюю люинию справа немного короче, чтобы не выделялся последний  letter-spacing: 5.4px; */
+    margin: 0 5px 0 0;
   }
 }

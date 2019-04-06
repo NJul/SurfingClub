@@ -7,10 +7,10 @@ const {
 const gulp = require("gulp");
 const autoprefixer = require("gulp-autoprefixer");
 const cssbeautify = require("gulp-cssbeautify");
-const removeComments = require('gulp-strip-css-comments');
+const removeComments = require("gulp-strip-css-comments");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
-const cleanCSS = require('gulp-clean-css');
+const cleanCSS = require("gulp-clean-css");
 const rigger = require("gulp-rigger");
 const uglify = require("gulp-uglify");
 const plumber = require("gulp-plumber");
@@ -20,6 +20,7 @@ const browsersync = require("browser-sync").create();
 const babel = require("gulp-babel");
 const concat = require("gulp-concat");
 const sourcemaps = require("gulp-sourcemaps");
+const fileinclude = require("gulp-file-include");
 
 
 /* Paths to source / build / watch files
@@ -34,14 +35,14 @@ var path = {
     fonts: "dist/fonts/"
   },
   src: {
-    html: "src/*.{html,php}",
+    html: "src/html/**/*.html",
     js: ["src/js/scripts.js"],
     css: ["src/css/reset.css", "src/css/bootstrap-reboot.min.css", "src/css/fonts.css", "src/scss/style.scss"],
     images: "src/images/**/*.{jpg,png,svg,gif,ico}",
     fonts: "src/fonts/**/*.{otf,eot,svg,ttf,woff,woff2}"
   },
   watch: {
-    html: "src/**/*.{html,php}",
+    html: "src/html/**/*.html",
     js: "src/js/**/*.js",
     css: "src/**/**/*.{scss,css}",
     images: "src/images/**/*.{jpg,png,svg,gif,ico}",
@@ -71,10 +72,17 @@ function browserSyncReload(done) {
 
 function html() {
   return src(path.src.html, {
-      base: 'src/'
+      base: "./src/html/"
     })
+    /* plumber нуже для обработки ошибок */
     .pipe(plumber())
+    /* Для встройки одного файла HTML в другой.  @@include('blocks/test.html') */
+    .pipe(fileinclude({
+      prefix: '@@'
+    }))
+    /* Сохранить исходный файл */
     .pipe(dest(path.build.html))
+    /* Обновить */
     .pipe(browsersync.stream());
 }
 
@@ -93,34 +101,34 @@ function css() {
     .pipe(sourcemaps.init())
     .pipe(cleanCSS())
     .pipe(removeComments())
-    .pipe(concat('all.css'))
+    .pipe(concat("all.css"))
     .pipe(rename({
       suffix: ".min",
       extname: ".css"
     }))
-    .pipe(sourcemaps.write('../css/map'))
+    .pipe(sourcemaps.write("../css/map"))
     .pipe(dest(path.build.css))
     .pipe(browsersync.stream());
 }
 
 function js() {
   return src(path.src.js, {
-      base: './src/js/'
+      base: "./src/js/"
     })
     .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(rigger())
     .pipe(babel({
-      presets: ['@babel/env']
+      presets: ["@babel/env"]
     }))
     .pipe(gulp.dest(path.build.js))
     .pipe(uglify())
-    .pipe(concat('all.js'))
+    .pipe(concat("all.js"))
     .pipe(rename({
       suffix: ".min",
       extname: ".js"
     }))
-    .pipe(sourcemaps.write('../js/map'))
+    .pipe(sourcemaps.write("../js/map"))
     .pipe(dest(path.build.js))
     .pipe(browsersync.stream());
 }

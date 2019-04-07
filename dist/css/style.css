@@ -607,11 +607,27 @@ $color-black: #000;
     display: flex;
 }
 
+.article--odd {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
 .article__descr {
     width: 462px;
     padding-left: 70px;
     padding-right: 50px;
     padding-top: 80px;
+}
+
+.article-odd .article__descr {
+    width: 515px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 515px;
+    flex: 0 0 515px;
+    padding-left: 75px;
+    padding-right: 105px;
 }
 
 .article .title {
@@ -653,6 +669,18 @@ $color-black: #000;
 .article__preview {
     width: 762px;
     position: relative;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 762px;
+    flex: 0 0 762px;
+    /* Изменяем его от внешнего модификатора, scss развернет & в: .article--odd .article__preview */
+    /* fles: flex-grow  flex-shrink базовый размер */
+}
+
+.article--odd .article__preview {
+    width: 490px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 490px;
+    flex: 0 0 490px;
 }
 
 .article__preview .article_preview-descr {
@@ -662,4 +690,11 @@ $color-black: #000;
     position: absolute;
     right: -30px;
     top: 0;
+}
+
+.article--odd .article__preview .article_preview-descr {
+        /* Увести ее в левую сторону на 30px за левую границу */
+    left: -30px;
+        /* right нужно обнулить, поэтому сделали right: auto; */
+    right: auto;
 }

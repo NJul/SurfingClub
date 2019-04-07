@@ -48,14 +48,7 @@ $color-read-more-link: #363636;
 
     &__text {
       width: 390px;
-      font-family: $font-fifth;
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 1.71;
-      letter-spacing: 0.4px;
-      color: $secondary-color;
-
-      p {}
+      @extend .descr-text-p;
     }
 
     &__img {
@@ -64,7 +57,7 @@ $color-read-more-link: #363636;
       height: 572px;
 
       &--bg-1 {
-        background: url('../images/img/img-header.jpg') no-repeat center center;
+        background: url("../images/img/img-header.jpg") no-repeat center center;
         background-size: cover;
         box-shadow: -16px 25px 65px rgba(19, 20, 24, 0.2);
       }
@@ -79,9 +72,11 @@ $color-read-more-link: #363636;
     align-items: center;
     line-height: 1;
 
-    &__left {}
+    &__left {
+    }
 
-    &__right {}
+    &__right {
+    }
   }
 
   .slider-my-controls-number {

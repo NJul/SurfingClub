@@ -55,21 +55,7 @@
     */
 
     &__content {
-      transform: rotate(-90deg) translate(-100%, 0);
-      /* чтобы контент занял ту ширину, что ему необходимо: */
-      position: absolute;
-      left: 0;
-      top: 0;
-      /* точка трансформации, относительно которой крутится объект при rotate */
-      transform-origin: left top;
-
-      font-family: $font-third;
-      font-size: 9px;
-      font-weight: bold;
-      line-height: 1;
-      text-transform: uppercase;
-      letter-spacing: 5.4px;
-      color: rgba(11, 12, 17, 0.2);
+      @extend .vertical-text;
     }
   }
 
@@ -94,7 +80,6 @@
     */
 
     &__item {
-
       /* Задаем margin-bottom: 34px; кроме последнего элемента */
       &:not(:last-child) {
         margin-bottom: 34px;

@@ -57,13 +57,8 @@ $color-line: #78a6ec;
     margin-top: 60px;
     margin-left: 115px;
     width: 336px;
-    font-family: $font-fifth;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.71;
-    letter-spacing: 0.4px;
-    color: rgba(97, 97, 97, 0.65);
     margin-bottom: 45px;
+    @extend .descr-text-p;
   }
 
   &__link {

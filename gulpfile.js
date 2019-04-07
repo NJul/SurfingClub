@@ -42,6 +42,7 @@ var path = {
     fonts: "src/fonts/**/*.{otf,eot,svg,ttf,woff,woff2}"
   },
   watch: {
+    /* Все html файлы в папке html на любом уровне вложенности, когда что-то изменится - запустить task html. */
     html: "src/html/**/*.html",
     js: "src/js/**/*.js",
     css: "src/**/**/*.{scss,css}",
@@ -108,6 +109,7 @@ function css() {
     }))
     .pipe(sourcemaps.write("../css/map"))
     .pipe(dest(path.build.css))
+    /* Обновляем браузер, когда что-то изменилось. */
     .pipe(browsersync.stream());
 }
 

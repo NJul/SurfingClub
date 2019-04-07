@@ -1,0 +1,67 @@
+/*
+$primary-color: #0b0c11;
+$secondary-color: #8f8f8f;
+$color-third: rgba(93, 168, 239, 0.9);
+$color-slider-my-controls-active: #5da8ef;
+$color-slider-my-controls-from: #ebebeb;
+$color-slider-my-controls-total: #262626;
+$color-line: #78a6ec;
+$color-read-more-link: #363636;
+$color-title: #333333;
+$color-category: #7a7a7a;
+$color-price: #ce60a8;
+$color-bg-img-holder: #ececec;
+$color-01: #f9f9f9;
+
+$color-white: #fff;
+$color-black: #000;
+*/
+
+.subtitle {
+  display: block;
+  text-transform: uppercase;
+  font-family: $font-third;
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 5.4px;
+  color: $color-third;
+}
+
+.title {
+  font-family: $font-primary;
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: $color-title;
+}
+
+.descr-text-p {
+  font-family: $font-fifth;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.71;
+  letter-spacing: 0.4px;
+  color: rgba(97, 97, 97, 0.65);
+}
+
+.vertical-text {
+  font-family: $font-third;
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 5.4px;
+  color: rgba(11, 12, 17, 0.2);
+  margin: -5px 0 0 0;
+
+  transform: rotate(-90deg) translate(-100%, 0);
+  /* чтобы контент занял ту ширину, что ему необходимо: */
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* точка трансформации, относительно которой крутится объект при rotate */
+  transform-origin: left top;
+}

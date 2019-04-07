@@ -1,44 +1,7 @@
 @charset "UTF-8";
-/*
-Media query manager
 
-0 - 600px: Phone
-600 - 900px: Tablet portrait
-900 - 1200px: Tablet landscape
-[1200 - 1800] is where our normal styles apply
-1800px + : Big desktop
-
-$breakpoint arguement choices:
-- phone
-- tab-port
-- tab-land
-- big-desktop
-
-ORDER: Base + typography > general layout + grid > page layout > components
-
-1em = 16px
-600px / 16px = 37.5em
-*/
 html {
     font-size: 62.5%;
-  /*   @include respond(phone) {
-    font-size: 50%;
-  }
-
-  @include respond(tab-land) {
-    // width < 1200?
-    font-size: 56.25%;
-    // 1rem = 9px, 9/16 = 56.25%
-  }
-
-  @include respond(tab-port) {
-    // width < 900?
-    font-size: 50%; //1 rem = 8px, 8/16 = 50%
-  }
-
-  @include respond(big-desktop) {
-    font-size: 75%; //1rem = 12, 12/16
-  } */
 }
 
 body {
@@ -49,6 +12,76 @@ body {
 
 .relative {
     position: relative;
+}
+
+/*
+$primary-color: #0b0c11;
+$secondary-color: #8f8f8f;
+$color-third: rgba(93, 168, 239, 0.9);
+$color-slider-my-controls-active: #5da8ef;
+$color-slider-my-controls-from: #ebebeb;
+$color-slider-my-controls-total: #262626;
+$color-line: #78a6ec;
+$color-read-more-link: #363636;
+$color-title: #333333;
+$color-category: #7a7a7a;
+$color-price: #ce60a8;
+$color-bg-img-holder: #ececec;
+$color-01: #f9f9f9;
+
+$color-white: #fff;
+$color-black: #000;
+*/
+.subtitle {
+    display: block;
+    text-transform: uppercase;
+    font-family: "League Spartan Bold";
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 5.4px;
+    color: rgba(93, 168, 239, 0.9);
+}
+
+.title {
+    font-family: "Playfair Display Bold";
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: #333333;
+}
+
+.descr-text-p, .slider-my-wrapper .slider-my__text, .club-description__text, .article__text {
+    font-family: "Poppins Light";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71;
+    letter-spacing: 0.4px;
+    color: rgba(97, 97, 97, 0.65);
+}
+
+.vertical-text, .header .site-descr__content, .article__preview .article_preview-descr-content {
+    font-family: "League Spartan Bold";
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 5.4px;
+    color: rgba(11, 12, 17, 0.2);
+    margin: -5px 0 0 0;
+    -webkit-transform: rotate(-90deg) translate(-100%, 0);
+    -ms-transform: rotate(-90deg) translate(-100%, 0);
+    transform: rotate(-90deg) translate(-100%, 0);
+  /* чтобы контент занял ту ширину, что ему необходимо: */
+    position: absolute;
+    left: 0;
+    top: 0;
+  /* точка трансформации, относительно которой крутится объект при rotate */
+    -webkit-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
 }
 
 /*
@@ -108,12 +141,6 @@ $color-read-more-link: #363636;
 
 .slider-my-wrapper .slider-my__text {
     width: 390px;
-    font-family: "Poppins Light";
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.71;
-    letter-spacing: 0.4px;
-    color: #8f8f8f;
 }
 
 .slider-my-wrapper .slider-my__img {
@@ -212,27 +239,6 @@ a.read-more-link {
     margin: 0 5px 0 0;
 }
 
-.subtitle {
-    display: block;
-    text-transform: uppercase;
-    font-family: "League Spartan Bold";
-    font-size: 9px;
-    font-weight: bold;
-    line-height: 1;
-    letter-spacing: 5.4px;
-    color: rgba(93, 168, 239, 0.9);
-}
-
-.title {
-    font-family: "Playfair Display Bold";
-    font-size: 42px;
-    font-weight: bold;
-    line-height: 1.2;
-    letter-spacing: 0.4px;
-    text-align: center;
-    color: #333333;
-}
-
 .container {
     width: 1224px;
     margin-left: auto;
@@ -304,27 +310,6 @@ a.read-more-link {
     height: 12px;
     background-color: red; 
     */
-}
-
-.header .site-descr__content {
-    -webkit-transform: rotate(-90deg) translate(-100%, 0);
-    -ms-transform: rotate(-90deg) translate(-100%, 0);
-    transform: rotate(-90deg) translate(-100%, 0);
-      /* чтобы контент занял ту ширину, что ему необходимо: */
-    position: absolute;
-    left: 0;
-    top: 0;
-      /* точка трансформации, относительно которой крутится объект при rotate */
-    -webkit-transform-origin: left top;
-    -ms-transform-origin: left top;
-    transform-origin: left top;
-    font-family: "League Spartan Bold";
-    font-size: 9px;
-    font-weight: bold;
-    line-height: 1;
-    text-transform: uppercase;
-    letter-spacing: 5.4px;
-    color: rgba(11, 12, 17, 0.2);
 }
 
 .header-social {
@@ -486,12 +471,6 @@ $color-line: #78a6ec;
     margin-top: 60px;
     margin-left: 115px;
     width: 336px;
-    font-family: "Poppins Light";
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.71;
-    letter-spacing: 0.4px;
-    color: rgba(97, 97, 97, 0.65);
     margin-bottom: 45px;
 }
 
@@ -518,7 +497,7 @@ $color-black: #000;
 */
 .shop {
     padding-top: 95px;
-    padding-bottom: 95px;
+    padding-bottom: 110px;
 }
 
 .shop-slider {
@@ -618,4 +597,69 @@ $color-black: #000;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+}
+
+.article {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.article__descr {
+    width: 462px;
+    padding-left: 70px;
+    padding-right: 50px;
+    padding-top: 80px;
+}
+
+.article .title {
+    line-height: 1.57;
+    text-align: left;
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.article .title:before {
+    content: attr(data-number);
+    font-family: "League Spartan Bold";
+    font-size: 130px;
+    font-weight: bold;
+    line-height: 0.51;
+    letter-spacing: 13px;
+    color: #f9f9f9;
+    position: absolute;
+    left: 0;
+    top: -17px;
+    z-index: -1;
+}
+
+.article .title:after {
+    content: "";
+    width: 23px;
+    height: 2px;
+    background-color: #78a6ec;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.article__text {
+    margin-bottom: 60px;
+    width: 345px;
+}
+
+.article__preview {
+    width: 762px;
+    position: relative;
+}
+
+.article__preview .article_preview-descr {
+      /* background-color: red;
+      width: 10px;
+      height: 10px; */
+    position: absolute;
+    right: -30px;
+    top: 0;
 }

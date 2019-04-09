@@ -158,14 +158,13 @@ select {
     vertical-align: middle;
 }
 
-input::-webkit-input-placeholder {
-    color: #ebedec;
+/* input::-webkit-input-placeholder {
+	color: #ebedec;
 }
 
 input:focus::-webkit-input-placeholder {
-    color: #ebedec;
-}
-
+	color: #ebedec;
+} */
 /*@media*/
 /* @media (min-width: 1921px){} 													QHD \ UHD
 @media (min-width: 1600px) and (max-width: 1919px) {}	HD +

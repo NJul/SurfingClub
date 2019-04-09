@@ -47,6 +47,11 @@ $color-black: #000;
   color: rgba(97, 97, 97, 0.65);
 }
 
+.title-descr {
+  @extend .descr-text-p;
+  margin-bottom: 35px;
+}
+
 .vertical-text {
   font-family: $font-third;
   font-size: 9px;

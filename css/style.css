@@ -23,6 +23,19 @@ body {
     justify-content: flex-end;
 }
 
+.flex-column-center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
 /*
 $primary-color: #0b0c11;
 $secondary-color: #8f8f8f;
@@ -171,6 +184,8 @@ $color-read-more-link: #363636;
 
 .slider-my-wrapper .slider-my-controls {
     position: absolute;
+    left: 0;
+    bottom: 0;
     width: 81px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -252,6 +267,50 @@ a.read-more-link {
     margin: 0 5px 0 0;
 }
 
+/* Иконки социальных сетей */
+.header-social-wrapper {
+    width: 20px;
+    position: absolute;
+    right: -45px;
+    bottom: 0;
+}
+
+.social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.social--vertical {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 20px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.social__item {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.social--vertical .social__item {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.social--vertical .social__item:not(:last-child) {
+    margin-bottom: 35px;
+}
+
 .container {
     width: 1224px;
     margin-left: auto;
@@ -261,55 +320,10 @@ a.read-more-link {
 .header {
     position: relative;
     margin-bottom: 95px;
-  /* Иконки социальных сетей */
 }
 
-.header .navigation-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 128px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.header .logo {
+.header .logo-wrapper {
     margin-right: 190px;
-}
-
-.header .navigation {
-    margin: 0;
-    padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    list-style-type: none;
-}
-
-.header .navigation__item {
-      /* &:last-child {
-        margin-right: 0;
-      } */
-}
-
-.header .navigation__item:not(:last-child) {
-    margin-right: 40px;
-}
-
-.header .navigation__link {
-    text-decoration: none;
-    font-family: "League Spartan Bold";
-    font-size: 9px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: rgba(11, 12, 17, 0.9);
-    line-height: 7.33;
-    letter-spacing: 5.6px;
 }
 
 .header .site-descr {
@@ -325,39 +339,48 @@ a.read-more-link {
     */
 }
 
-.header-social {
-    position: absolute;
-    right: -60px;
-    /* Отступ снизу 0 */
-    bottom: 0;
-    width: 20px;
-    /* Будем центрировать с помощью флексов */
+.navigation-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+    height: 128px;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    /* Красный квадрат */
-    /*  
-    height: 150px;
-    background-color: red; 
-    */
 }
 
-.header-social__item {
-      /* Задаем margin-bottom: 34px; кроме последнего элемента */
+.navigation {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    list-style-type: none;
 }
 
-.header-social__item:not(:last-child) {
-    margin-bottom: 34px;
+.navigation__item {
+    /* &:last-child {
+      margin-right: 0;
+    } */
+}
+
+.navigation__item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.navigation__link {
+    text-decoration: none;
+    font-family: "League Spartan Bold";
+    font-size: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgba(11, 12, 17, 0.9);
+    line-height: 7.33;
+    letter-spacing: 5.6px;
 }
 
 /*
@@ -863,4 +886,17 @@ $color-black: #000;
     padding-left: 48px;
     text-align: left;
     font-size: 32px;
+}
+
+.footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.footer-logo-wrapper {
+    margin-bottom: 40px;
+}
+
+.footer-nav-wrapper {
+    margin-bottom: 40px;
 }

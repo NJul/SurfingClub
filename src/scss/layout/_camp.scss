@@ -1,0 +1,43 @@
+.camp {
+  min-height: 475px;
+  position: relative;
+  margin-top: 75px;
+
+  &__img {
+    width: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__descr {
+    width: 50%;
+    padding-top: 100px;
+    padding-left: 44px;
+  }
+
+  &__label {
+    font-family: $font-third;
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 5.6px;
+    text-transform: uppercase;
+    color: rgba(11, 12, 17, 0.27);
+  }
+
+  &__address {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding-left: 48px;
+
+    @extend .title;
+    text-align: left;
+    font-size: 32px;
+  }
+}

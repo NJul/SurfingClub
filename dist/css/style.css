@@ -14,6 +14,15 @@ body {
     position: relative;
 }
 
+.flex-end {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
 /*
 $primary-color: #0b0c11;
 $secondary-color: #8f8f8f;
@@ -43,7 +52,7 @@ $color-black: #000;
     color: rgba(93, 168, 239, 0.9);
 }
 
-.title {
+.title, .camp__address {
     font-family: "Playfair Display Bold";
     font-size: 42px;
     font-weight: bold;
@@ -634,14 +643,14 @@ $color-black: #000;
     padding-right: 105px;
 }
 
-.article .title {
+.article .title, .article .camp__address {
     line-height: 1.57;
     text-align: left;
     position: relative;
     margin-bottom: 35px;
 }
 
-.article .title:before {
+.article .title:before, .article .camp__address:before {
     content: attr(data-number);
     font-family: "League Spartan Bold";
     font-size: 130px;
@@ -655,7 +664,7 @@ $color-black: #000;
     z-index: -1;
 }
 
-.article .title:after {
+.article .title:after, .article .camp__address:after {
     content: "";
     width: 23px;
     height: 2px;
@@ -745,7 +754,7 @@ $color-black: #000;
     background-color: #78a6ec;
 }
 
-.subscribe .title {
+.subscribe .title, .subscribe .camp__address {
     margin-bottom: 20px;
 }
 
@@ -812,4 +821,46 @@ $color-black: #000;
 .subscribe__submit:active {
     background-color: #2f8fea;
     outline: none;
+}
+
+.camp {
+    min-height: 475px;
+    position: relative;
+    margin-top: 75px;
+}
+
+.camp__img {
+    width: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.camp__descr {
+    width: 50%;
+    padding-top: 100px;
+    padding-left: 44px;
+}
+
+.camp__label {
+    font-family: "League Spartan Bold";
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 5.6px;
+    text-transform: uppercase;
+    color: rgba(11, 12, 17, 0.27);
+}
+
+.camp__address {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding-left: 48px;
+    text-align: left;
+    font-size: 32px;
 }

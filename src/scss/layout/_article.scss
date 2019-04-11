@@ -78,6 +78,20 @@
       right: -30px;
       top: 0;
 
+      @media (max-width: 1400px) {
+        /* Модификатор обертка, на место & подставляется article_preview-descr */
+        .article--even & {
+          @media (max-width: 1400px) {
+            right: 40px;
+            top: 30px;
+
+            .article_preview-descr-content {
+              color: $color-white;
+            }
+          }
+        }
+      }
+
       .article--odd & {
         /* Увести ее в левую сторону на 30px за левую границу */
         left: -30px;

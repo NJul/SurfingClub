@@ -22,6 +22,14 @@
     &__content {
       @extend .vertical-text;
     }
+
+    @media (max-width: 1400px) {
+      right: 40px;
+      top: 170px;
+      .site-descr__content {
+        color: $color-white;
+      }
+    }
   }
 }
 

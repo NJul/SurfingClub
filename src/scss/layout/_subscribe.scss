@@ -17,6 +17,28 @@ $color-white: #fff;
 $color-black: #000;
 */
 
+.subscribe-wrapper {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: "";
+    top: -405px;
+    bottom: auto;
+    /* Чтобы фон растягивался */
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1335px;
+    /* Через z-index вынесем назад */
+    z-index: -1;
+    // background-color: blue;
+    background-image: url("../images/bg/bg-surfer.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
 .subscribe {
   width: 590px;
   margin-top: 50px;

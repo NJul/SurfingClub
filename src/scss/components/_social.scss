@@ -5,6 +5,11 @@
   position: absolute;
   right: -45px;
   bottom: 0;
+
+  @media (max-width: 1400px) {
+    right: 30px;
+    bottom: 30px;
+  }
 }
 
 .social {

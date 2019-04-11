@@ -2,43 +2,8 @@
   position: relative;
   margin-bottom: 95px;
 
-  .navigation-wrapper {
-    display: flex;
-    height: 128px;
-    align-items: center;
-  }
-
-  .logo {
+  .logo-wrapper {
     margin-right: 190px;
-  }
-
-  .navigation {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-
-    &__item {
-      &:not(:last-child) {
-        margin-right: 40px;
-      }
-
-      /* &:last-child {
-        margin-right: 0;
-      } */
-    }
-
-    &__link {
-      text-decoration: none;
-      font-family: $font-third;
-      font-size: 9px;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: rgba(11, 12, 17, 0.9);
-      line-height: 7.33;
-      letter-spacing: 5.6px;
-    }
   }
 
   .site-descr {
@@ -58,32 +23,39 @@
       @extend .vertical-text;
     }
   }
+}
 
-  /* Иконки социальных сетей */
-  &-social {
-    position: absolute;
-    right: -60px;
-    /* Отступ снизу 0 */
-    bottom: 0;
-    width: 20px;
+.navigation-wrapper {
+  display: flex;
+  height: 128px;
+  align-items: center;
+}
 
-    /* Будем центрировать с помощью флексов */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+.navigation {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
 
-    /* Красный квадрат */
-    /*  
-    height: 150px;
-    background-color: red; 
-    */
-
-    &__item {
-      /* Задаем margin-bottom: 34px; кроме последнего элемента */
-      &:not(:last-child) {
-        margin-bottom: 34px;
-      }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 40px;
     }
+
+    /* &:last-child {
+      margin-right: 0;
+    } */
+  }
+
+  &__link {
+    text-decoration: none;
+    font-family: $font-third;
+    font-size: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgba(11, 12, 17, 0.9);
+    line-height: 7.33;
+    letter-spacing: 5.6px;
   }
 }

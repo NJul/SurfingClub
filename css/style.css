@@ -275,6 +275,13 @@ a.read-more-link {
     bottom: 0;
 }
 
+@media (max-width: 1400px) {
+    .header-social-wrapper {
+        right: 30px;
+        bottom: 30px;
+    }
+}
+
 .social {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -337,6 +344,17 @@ a.read-more-link {
     height: 12px;
     background-color: red; 
     */
+}
+
+@media (max-width: 1400px) {
+    .header .site-descr {
+        right: 40px;
+        top: 170px;
+    }
+
+    .header .site-descr .site-descr__content {
+        color: #fff;
+    }
 }
 
 .navigation-wrapper {
@@ -534,6 +552,23 @@ $color-black: #000;
 .shop {
     padding-top: 95px;
     padding-bottom: 110px;
+    position: relative;
+}
+
+.shop:before {
+    position: absolute;
+    content: "";
+    top: -330px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 984px;
+    z-index: -1;
+    background-image: url("../images/bg/bg-water.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .shop-slider {
@@ -728,6 +763,23 @@ $color-black: #000;
     top: 0;
 }
 
+@media (max-width: 1400px) {
+    .article__preview .article_preview-descr {
+          /* Модификатор обертка, на место & подставляется article_preview-descr */
+    }
+}
+
+@media (max-width: 1400px) and (max-width: 1400px) {
+    .article--even .article__preview .article_preview-descr {
+        right: 40px;
+        top: 30px;
+    }
+
+    .article--even .article__preview .article_preview-descr .article_preview-descr-content {
+        color: #fff;
+    }
+}
+
 .article--odd .article__preview .article_preview-descr {
         /* Увести ее в левую сторону на 30px за левую границу */
     left: -30px;
@@ -753,6 +805,28 @@ $color-01: #f9f9f9;
 $color-white: #fff;
 $color-black: #000;
 */
+.subscribe-wrapper {
+    position: relative;
+}
+
+.subscribe-wrapper:before {
+    position: absolute;
+    content: "";
+    top: -405px;
+    bottom: auto;
+    /* Чтобы фон растягивался */
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1335px;
+    /* Через z-index вынесем назад */
+    z-index: -1;
+    background-image: url("../images/bg/bg-surfer.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .subscribe {
     width: 590px;
     margin-top: 50px;

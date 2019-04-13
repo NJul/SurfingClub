@@ -576,10 +576,10 @@ $color-black: #000;
     width: 100%;
     height: 984px;
     z-index: -1;
-    background-image: url("../images/bg/bg-water.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-image: url("../images/bg/bg-lines.png"), url("../images/bg/bg-water.jpg");
+    background-repeat: repeat-y, no-repeat;
+    background-position: center, center;
+    background-size: auto, cover;
 }
 
 .shop-slider-wrapper {
@@ -604,6 +604,11 @@ $color-black: #000;
     justify-content: space-between;
     margin-top: 50px;
     margin-bottom: 80px;
+}
+
+/* Переписывам стиль карусели, где ширина картинки увеличивается до 100%, и картинки становятся размытые. При width: auto; картинки равны исходному размеру. */
+#shopSlider.owl-carousel .owl-item img {
+    width: auto;
 }
 
 .shopSlider-controls {
@@ -878,10 +883,10 @@ $color-black: #000;
     height: 1335px;
     /* Через z-index вынесем назад */
     z-index: -1;
-    background-image: url("../images/bg/bg-surfer.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-image: url("../images/bg/bg-lines.png"), url("../images/bg/bg-surfer.jpg");
+    background-repeat: repeat-y, no-repeat;
+    background-position: center, center;
+    background-size: auto, cover;
 }
 
 .subscribe {

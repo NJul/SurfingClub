@@ -32,10 +32,11 @@ $color-black: #000;
     /* Через z-index вынесем назад */
     z-index: -1;
     // background-color: blue;
-    background-image: url("../images/bg/bg-surfer.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-image: url("../images/bg/bg-lines.png"),
+      url("../images/bg/bg-surfer.jpg");
+    background-repeat: repeat-y, no-repeat;
+    background-position: center, center;
+    background-size: auto, cover;
   }
 }
 

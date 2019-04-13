@@ -206,7 +206,11 @@ $color-read-more-link: #363636;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    z-index: 9;
+    z-index: 12;
+}
+
+.slider-my-wrapper .slider-my-controls img {
+    vertical-align: top;
 }
 
 .slider-my-wrapper .slider-my-controls-number {
@@ -572,15 +576,15 @@ $color-black: #000;
     width: 100%;
     height: 984px;
     z-index: -1;
-    background-image: url("../images/bg/bg-water.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-image: url("../images/bg/bg-lines.png"), url("../images/bg/bg-water.jpg");
+    background-repeat: repeat-y, no-repeat;
+    background-position: center, center;
+    background-size: auto, cover;
 }
 
 .shop-slider-wrapper {
     height: 565px;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
     position: relative;
 }
 
@@ -600,6 +604,43 @@ $color-black: #000;
     justify-content: space-between;
     margin-top: 50px;
     margin-bottom: 80px;
+}
+
+/* Переписывам стиль карусели, где ширина картинки увеличивается до 100%, и картинки становятся размытые. При width: auto; картинки равны исходному размеру. */
+#shopSlider.owl-carousel .owl-item img {
+    width: auto;
+}
+
+.shopSlider-controls {
+    position: relative;
+}
+
+.shopSlider-arrow {
+    width: 40px;
+    height: 48px;
+    padding: 15px;
+    position: absolute;
+    bottom: calc(120px + 80px);
+    z-index: 9;
+    cursor: pointer;
+}
+
+.shopSlider-arrow img {
+    vertical-align: top;
+}
+
+.shopSlider-arrow--left {
+    left: -70px;
+    -webkit-transform: translate(-100%, 0);
+    -ms-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+}
+
+.shopSlider-arrow--right {
+    right: -70px;
+    -webkit-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
+    transform: translate(100%, 0);
 }
 
 /* Слайдер с бордами */
@@ -842,10 +883,10 @@ $color-black: #000;
     height: 1335px;
     /* Через z-index вынесем назад */
     z-index: -1;
-    background-image: url("../images/bg/bg-surfer.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-image: url("../images/bg/bg-lines.png"), url("../images/bg/bg-surfer.jpg");
+    background-repeat: repeat-y, no-repeat;
+    background-position: center, center;
+    background-size: auto, cover;
 }
 
 .subscribe {

@@ -206,7 +206,11 @@ $color-read-more-link: #363636;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    z-index: 9;
+    z-index: 12;
+}
+
+.slider-my-wrapper .slider-my-controls img {
+    vertical-align: top;
 }
 
 .slider-my-wrapper .slider-my-controls-number {
@@ -580,7 +584,7 @@ $color-black: #000;
 
 .shop-slider-wrapper {
     height: 565px;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
     position: relative;
 }
 
@@ -600,6 +604,38 @@ $color-black: #000;
     justify-content: space-between;
     margin-top: 50px;
     margin-bottom: 80px;
+}
+
+.shopSlider-controls {
+    position: relative;
+}
+
+.shopSlider-arrow {
+    width: 40px;
+    height: 48px;
+    padding: 15px;
+    position: absolute;
+    bottom: calc(120px + 80px);
+    z-index: 9;
+    cursor: pointer;
+}
+
+.shopSlider-arrow img {
+    vertical-align: top;
+}
+
+.shopSlider-arrow--left {
+    left: -70px;
+    -webkit-transform: translate(-100%, 0);
+    -ms-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+}
+
+.shopSlider-arrow--right {
+    right: -70px;
+    -webkit-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
+    transform: translate(100%, 0);
 }
 
 /* Слайдер с бордами */

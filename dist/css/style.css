@@ -578,6 +578,19 @@ $color-black: #000;
     background-size: cover;
 }
 
+.shop-slider-wrapper {
+    height: 565px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.shop-slider-special-holder {
+    position: absolute;
+    left: 0;
+    right: -85px;
+}
+
+/* удалили из разметки*/
 .shop-slider {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -592,8 +605,9 @@ $color-black: #000;
 /* Слайдер с бордами */
 .board {
     position: relative;
-    width: 350px;
-    height: 433px;
+    width: 435px;
+    height: 435px;
+    margin-top: 130px;
   /* Это блок, с четырьмя линиями текста ниже. Первая буква заголовка всегда начинается в одном и том же месте. То есть заголовок выравнивается не по правому краю. */
 }
 

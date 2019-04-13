@@ -5,66 +5,29 @@
       <span class="subtitle">Shop</span>
       Surfboards
     </h2>
-    <div class="shop-slider">
-      <!-- board -->
-      <div class="board">
-        <!-- board делаем блоком ВЕМ, так как внутри будет много элементов. -->
+  </div>
 
-        <div class="board__img-holder">
-          <img class="board__img" src="images/boards/board-1.png" alt="Surfing board 1" />
-        </div>
-
-        <div class="board-descr">
-          <div class="board__category">Funboards</div>
-          <div class="board__title">Chilli Rare Bird</div>
-
-          <div class="board-buy">
-            <div class="board-buy__price">$890</div>
-            <div class="board-buy__link">Buy</div>
-          </div>
-        </div>
+  <div class="container shop-slider-wrapper">
+    <div class="shop-slider-special-holder">
+      <div id="shopSlider" class="owl-carousel">
+        <!-- board -->
+        @@include("shop-items/item-01.html")
+        <!-- // board -->
+        <!-- board -->
+        @@include("shop-items/item-02.html")
+        <!-- // board -->
+        <!-- board -->
+        @@include("shop-items/item-03.html")
+        <!-- // board -->
       </div>
-      <!-- // board -->
-      <!-- board -->
-      <div class="board">
-        <div class="board__img-holder">
-          <img class="board__img" src="images/boards/board-2.png" alt="Surfing board 2" />
-        </div>
-
-        <div class="board-descr">
-          <div class="board__category">Surfboards</div>
-          <div class="board__title">Emery NEM XF</div>
-
-          <div class="board-buy">
-            <div class="board-buy__price">$950</div>
-            <div class="board-buy__link">Buy</div>
-          </div>
-        </div>
-      </div>
-      <!-- // board -->
-      <!-- board -->
-      <div class="board">
-        <div class="board__img-holder">
-          <img class="board__img" src="images/boards/board-3.png" alt="Surfing board 3" />
-        </div>
-
-        <div class="board-descr">
-          <div class="board__category">Funboards</div>
-          <div class="board__title">Agency GROM</div>
-
-          <div class="board-buy">
-            <div class="board-buy__price">$670</div>
-            <div class="board-buy__link">Buy</div>
-          </div>
-        </div>
-      </div>
-      <!-- // board -->
     </div>
-    <!-- // shop-slider -->
+  </div>
+  <!-- // shop-slider -->
 
+  <div class="container">
     <div class="shop-link-wrapper">
       <a href="#" class="read-more-link">Show All</a>
     </div>
   </div>
-  <!-- // container -->
+
 </section>

@@ -38,6 +38,19 @@ $color-black: #000;
   }
 }
 
+.shop-slider-wrapper {
+  height: 565px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.shop-slider-special-holder {
+  position: absolute;
+  left: 0;
+  right: -85px;
+}
+
+/* удалили из разметки*/
 .shop-slider {
   display: flex;
   justify-content: space-between;
@@ -50,10 +63,9 @@ $color-black: #000;
 /* Слайдер с бордами */
 .board {
   position: relative;
-  width: 350px;
-  height: 433px;
-  // margin-right: 85px;
-  // background-color: #424040;
+  width: 435px;
+  height: 435px;
+  margin-top: 130px;
 
   &__img-holder {
     position: absolute;

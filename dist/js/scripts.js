@@ -17,12 +17,16 @@ $(document).ready(function () {
   // smartSpeed: 1000
   // });
   var headerSlider = $(".owl-carousel");
+  headerSlider.on('initialized.owl.carousel', function (event) {
+    $('.slider-my-controls-number__active').text(event.item.index + 1);
+    $('.slider-my-controls-number__total').text(event.item.count);
+  });
   headerSlider.owlCarousel({
     /* Показывается 1 слайд за 1 раз */
     items: 1,
 
     /* Зацикливание, бесконечная прокрутка слайдов */
-    loop: true,
+    // loop: true,
 
     /* Точки выбора слайда по умолчанию true */
     dots: false,
@@ -41,5 +45,15 @@ $(document).ready(function () {
     // With optional speed parameter
     // Parameters has to be in square bracket , '[]' )
     headerSlider.trigger('prev.owl.carousel');
+  });
+  headerSlider.on('changed.owl.carousel', function (event) {
+    /* Распечатаем, сколько всего у нас элементов слайдера */
+    // console.log(event.item.count);
+
+    /* и текущий слайд */
+    // console.log(event.item.index);
+    // console.log(event.page.index);
+    $('.slider-my-controls-number__active').text(event.item.index + 1);
+    $('.slider-my-controls-number__total').text(event.item.count);
   });
 });

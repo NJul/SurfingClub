@@ -1,0 +1,47 @@
+ <!-- В обертке slider-my-wrapper будут распологаться наши слайды -->
+ <div class="slider-my-wrapper">
+   <!-- Set up your HTML -->
+   <div id="headerSlider" class="owl-carousel">
+     @@include("header-slider-items/_slide-item.html")
+     @@include("header-slider-items/_slide-item.html")
+     @@include("header-slider-items/_slide-item.html")
+     @@include("header-slider-items/_slide-item.html")
+     @@include("header-slider-items/_slide-item.html")
+   </div>
+
+   <div class="container relative">
+     <!-- slides controls -->
+     <div class="slider-my-controls">
+
+       <a id="headerSliderLeft" class="slider-my-controls__left" href="#">
+         <img src="images/controls/header-slider-left.svg" alt="Left" />
+       </a>
+
+       <!-- slider-my-controls-number отдельный блок, а не элемент -->
+       <div class="slider-my-controls-number">
+         <span class="slider-my-controls-number__active">1</span>
+         <span class="slider-my-controls-number__from">/</span>
+         <span class="slider-my-controls-number__total">5</span>
+       </div>
+
+       <a id="headerSliderRight" class="slider-my-controls__right" href="#">
+         <img src="images/controls/header-slider-right.svg" alt="Right" />
+       </a>
+     </div>
+
+     <!-- Social icons -->
+     <div class="header-social-wrapper">
+       <div class="social social--vertical">
+         <a href="#" class="social__item">
+           <img src="images/socials/social-tumblr.svg" alt="Tumblr" />
+         </a>
+         <a href="#" class="social__item">
+           <img src="images/socials/social-twitter.svg" alt="Twitter" />
+         </a>
+         <a href="#" class="social__item">
+           <img src="images/socials/social-vimeo.svg" alt="Vimeo" />
+         </a>
+       </div>
+     </div>
+   </div>
+ </div>

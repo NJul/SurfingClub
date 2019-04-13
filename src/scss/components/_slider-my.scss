@@ -13,6 +13,16 @@ $color-read-more-link: #363636;
 
 .slider-my-wrapper {
   position: relative;
+  /* Ниже два очень важных момента, чтобы не появлялся горизонтальный скролл. */
+  width: 100%;
+  overflow: hidden;
+  /* Отступ после слайдера */
+  padding-bottom: 95px;
+
+  /* Обращаюсь к .owl-carousel , который имеет id="headerSlider", нахожу внутри него блок карусели .owl-stage-outer и делаю overflow: visible; Теперь мы видим тень внизу слайдера, которая раньше была скрыта. */
+  #headerSlider.owl-carousel .owl-stage-outer {
+    overflow: visible;
+  }
 
   .slider-my {
     position: relative;
@@ -72,7 +82,7 @@ $color-read-more-link: #363636;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    line-height: 1;
+    z-index: 9;
 
     &__left {
     }

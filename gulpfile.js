@@ -36,8 +36,8 @@ var path = {
   },
   src: {
     html: "src/html/**/*.html",
-    js: ["src/js/scripts.js"],
-    css: ["src/css/reset.css", "src/css/bootstrap-reboot.min.css", "src/css/fonts.css", "src/scss/style.scss"],
+    js: ["src/libs/jQuery/jquery-3.3.1.min.js", "src/libs/OwlCarousel2/owl.carousel.min.js", "src/js/scripts.js"],
+    css: ["src/css/reset.css", "src/css/bootstrap-reboot.min.css", "src/libs/OwlCarousel2/assets/owl.carousel.min.css", "src/libs/OwlCarousel2/assets/owl.theme.default.min.css", "src/css/fonts.css", "src/scss/style.scss"],
     images: "src/images/**/*.{jpg,png,svg,gif,ico}",
     fonts: "src/fonts/**/*.{otf,eot,svg,ttf,woff,woff2}"
   },

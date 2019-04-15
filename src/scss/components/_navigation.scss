@@ -1,0 +1,126 @@
+.navigation-wrapper {
+  // Mobile first сначала верстаем для мобильных устройств
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 1254px) {
+    // потом верстаем для десктопа
+
+    // display: flex; так как это свойство придет из Mobile first
+    flex-direction: row;
+    height: 128px;
+    // align-items: center; так как это свойство придет из Mobile first
+  }
+
+  .logo-wrapper {
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @media (min-width: 1254px) {
+      margin-right: 190px;
+      padding-top: 0;
+      padding-bottom: 0;
+      // ширину пусть занимает не 100%, а столько, сколько в нем контента
+      width: auto;
+    }
+  }
+
+  .site-descr {
+    width: auto;
+    display: block;
+    position: static;
+
+    @media (min-width: 1254px) {
+      position: absolute;
+      /* Красный квадрат, чтобы во время верстки видно было, как споцизионирован элемент */
+      // width: 12px;
+      // height: 12px;
+      right: 40px;
+      top: 170px;
+      z-index: 10;
+    }
+
+    @media (min-width: 1400px) {
+      /* Выносим его за контейнер */
+      right: -50px;
+      top: 58px;
+    }
+
+    &__content {
+      position: static;
+      margin-bottom: 20px;
+
+      color: rgba(11, 12, 17, 0.2);
+      font-family: $font-third;
+      font-size: 9px;
+      font-weight: bold;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 5.4px;
+
+      @media (min-width: 1254px) {
+        color: $color-white;
+        transform: rotate(-90deg) translate(-100%, 0);
+        position: absolute;
+        left: 0;
+        top: 0;
+        /* точка трансформации, относительно которой крутится объект при rotate */
+        transform-origin: left top;
+      }
+
+      @media (min-width: 1400px) {
+        color: rgba(11, 12, 17, 0.2);
+        margin: -5px 0 0 0;
+      }
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+  list-style-type: none;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @media (min-width: 1254px) {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: auto;
+  }
+
+  &__item {
+    text-align: center;
+    margin-bottom: 15px;
+    /* &:last-child {
+      margin-right: 0;
+    } */
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-family: $font-third;
+    font-size: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgba(11, 12, 17, 0.9);
+    line-height: 1;
+    letter-spacing: 5.6px;
+  }
+}

@@ -11,36 +11,60 @@ $color-line: #78a6ec;
 */
 
 .quote {
-  padding-top: 95px;
-  padding-bottom: 110px;
+  /* SASS позволяет выполнять арифметические операции */
+  /* для mobile отступы блока уменьшаем сверху и снизу */
+  padding-top: (95px/2);
+  padding-bottom: (110px/2);
+
+  @media (min-width: 992px) {
+    padding-top: 95px;
+    padding-bottom: 110px;
+  }
 
   &-wrapper {
-    position: relative;
-    width: 610px;
+    width: 100%;
+    padding: 0 15px;
+    /* Для десктопа, для мобайла ширина и так 100%: width: 100%; */
     margin: 0 auto;
+    /* // Для десктопа */
     text-align: center;
+    position: relative;
+
+    @media (min-width: 640px) {
+      width: 610px;
+      padding: 0;
+    }
 
     &:after {
       content: "";
       width: 2px;
-      height: 100px;
+      height: (100px/2);
       background-color: $color-line;
       position: absolute;
-      bottom: -58px;
+      bottom: (-58px/2);
       /* Размещаем линию точно по центру */
       left: 50%;
       transform: translate(-50%, 100%);
+
+      @media (min-width: 992px) {
+        height: 100px;
+        bottom: -58px;
+      }
     }
   }
 
   &__text h4 {
     margin-bottom: 30px;
     font-family: $font-secondary;
-    font-size: 26px;
+    font-size: 18px;
     font-weight: normal;
     line-height: 1.46;
     letter-spacing: 0.3px;
     color: rgba(54, 54, 54, 0.9);
+
+    @media (min-width: 992px) {
+      font-size: 26px;
+    }
   }
 
   &__author {

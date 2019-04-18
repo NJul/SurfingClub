@@ -1,26 +1,36 @@
 /* Иконки социальных сетей */
 
-.header-social-wrapper {
-  width: 20px;
-  position: absolute;
-  right: -45px;
-  bottom: 0;
-  z-index: 11;
+.social-horizontal {
+  margin-bottom: 30px;
+}
 
-  @media (max-width: 1400px) {
+.header-social-wrapper {
+  /* Вертикальные иконки социальных сетей */
+  display: none;
+
+  @media (min-width: 1254px) {
+    display: block;
+    position: absolute;
     right: 30px;
     bottom: 30px;
+    z-index: 11;
+  }
+
+  @media (min-width: 1400px) {
+    right: -55px;
+    bottom: 0;
   }
 }
 
 .social {
   display: flex;
   justify-content: center;
+  align-items: center;
 
+  /* Вертикальные иконки социальных сетей */
   &--vertical {
     flex-direction: column;
     width: 20px;
-    align-items: center;
 
     margin-left: 0;
     margin-right: 0;
@@ -30,6 +40,7 @@
     margin-left: 15px;
     margin-right: 15px;
 
+    /* Вертикальные иконки социальных сетей */
     .social--vertical & {
       margin-left: 0;
       margin-right: 0;

@@ -2,13 +2,19 @@
 $primary-color: #0b0c11;
 $secondary-color: #8f8f8f;
 $color-third: rgba(93, 168, 239, 0.9);
-$color-white: #fff;
-$color-black: #000;
 $color-slider-my-controls-active: #5da8ef;
 $color-slider-my-controls-from: #ebebeb;
 $color-slider-my-controls-total: #262626;
 $color-line: #78a6ec;
 $color-read-more-link: #363636;
+$color-title: #333333;
+$color-category: #7a7a7a;
+$color-price: #ce60a8;
+$color-bg-img-holder: #ececec;
+$color-01: #f9f9f9;
+
+$color-white: #fff;
+$color-black: #000;
 */
 
 .slider-my-wrapper {
@@ -30,41 +36,83 @@ $color-read-more-link: #363636;
     /* Выровняем наши элементы по концу оси. */
     justify-content: flex-end;
 
-    .subtitle {
-      margin-bottom: 26px;
-    }
-
+    /* .slider-my__descr */
     &__descr {
-      /* Ширина для текстового блока в слайдере */
-      width: 500px;
+      background-color: $color-white;
+      padding: 25px 25px 10px 25px;
+      min-width: 200px;
+      max-width: 680px;
       position: absolute;
-      left: 0;
-      top: 50%;
-      /* Пододвинет блок вверх на 50% его высоты, выровняв таким образом его четко по центру. */
-      transform: translateY(-50%);
+      // top: auto;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 20%);
+      box-shadow: -16px 0px 65px rgba(11, 12, 17, 0.2);
+      text-align: center;
+
+      @media (min-width: 1254px) {
+        background-color: transparent;
+        box-shadow: none;
+        text-align: left;
+        padding: 0;
+        /* Ширина для текстового блока в слайдере */
+        width: 500px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        /* Теперь bottom не должен работать, сбрасываем его. */
+        bottom: auto;
+        /* Пододвинет блок вверх на 50% его высоты, выровняв таким образом его четко по центру. */
+        transform: translateY(-50%);
+      }
     }
 
     &__heading {
-      margin-bottom: 24px;
-      padding-top: 20px;
+      margin-bottom: 10px;
+      color: $primary-color;
       font-family: $font-primary;
-      font-size: 62px;
+      font-size: 22px;
       font-weight: bold;
       line-height: 1.03;
-      letter-spacing: normal;
-      color: $primary-color;
-      text-shadow: 0px 3px 35px rgba(0, 0, 0, 0.39);
+
+      @media (min-width: 920px) {
+        font-size: 42px;
+      }
+
+      @media (min-width: 1254px) {
+        margin-bottom: 20px;
+        padding-top: 20px;
+        font-size: 62px;
+        text-shadow: 0px 3px 35px rgba(0, 0, 0, 0.39);
+      }
+    }
+
+    /* YOUR */
+    .subtitle {
+      margin-bottom: 10px;
+
+      @media (min-width: 1254px) {
+        margin-bottom: 26px;
+      }
     }
 
     &__text {
-      width: 390px;
       @extend .descr-text-p;
+
+      @media (min-width: 992px) {
+        width: 390px;
+      }
     }
 
     &__img {
       /* Определяем точный размер картинки */
-      width: 1016px;
-      height: 572px;
+      width: 100%;
+      height: 372px;
+
+      @media (min-width: 1254px) {
+        width: 1016px;
+        height: 572px;
+      }
 
       &--bg-1 {
         background: url("../images/img/img-header.jpg") no-repeat center center;
@@ -75,14 +123,27 @@ $color-read-more-link: #363636;
   }
 
   .slider-my-controls {
+    margin-top: 20px;
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: 50%;
+    bottom: -100px;
     width: 81px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 12;
+    transform: translate(-50%);
+
+    @media (min-width: 768px) {
+      bottom: -80px;
+    }
+
+    @media (min-width: 1254px) {
+      margin-top: 0;
+      left: 0;
+      bottom: -5px;
+      transform: translate(0%);
+    }
 
     img {
       vertical-align: top;

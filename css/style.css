@@ -639,24 +639,43 @@ $color-slider-my-controls-total: #262626;
 $color-line: #78a6ec;
 */
 .quote {
-    padding-top: 95px;
-    padding-bottom: 110px;
+  /* SASS позволяет выполнять арифметические операции */
+  /* для mobile отступы блока уменьшаем сверху и снизу */
+    padding-top: 47.5px;
+    padding-bottom: 55px;
+}
+
+@media (min-width: 992px) {
+    .quote {
+        padding-top: 95px;
+        padding-bottom: 110px;
+    }
 }
 
 .quote-wrapper {
-    position: relative;
-    width: 610px;
+    width: 100%;
+    padding: 0 15px;
+    /* Для десктопа, для мобайла ширина и так 100%: width: 100%; */
     margin: 0 auto;
+    /* // Для десктопа */
     text-align: center;
+    position: relative;
+}
+
+@media (min-width: 640px) {
+    .quote-wrapper {
+        width: 610px;
+        padding: 0;
+    }
 }
 
 .quote-wrapper:after {
     content: "";
     width: 2px;
-    height: 100px;
+    height: 50px;
     background-color: #78a6ec;
     position: absolute;
-    bottom: -58px;
+    bottom: -29px;
       /* Размещаем линию точно по центру */
     left: 50%;
     -webkit-transform: translate(-50%, 100%);
@@ -664,14 +683,27 @@ $color-line: #78a6ec;
     transform: translate(-50%, 100%);
 }
 
+@media (min-width: 992px) {
+    .quote-wrapper:after {
+        height: 100px;
+        bottom: -58px;
+    }
+}
+
 .quote__text h4 {
     margin-bottom: 30px;
     font-family: "Playfair Display Regular";
-    font-size: 26px;
+    font-size: 18px;
     font-weight: normal;
     line-height: 1.46;
     letter-spacing: 0.3px;
     color: rgba(54, 54, 54, 0.9);
+}
+
+@media (min-width: 992px) {
+    .quote__text h4 {
+        font-size: 26px;
+    }
 }
 
 .quote__author {

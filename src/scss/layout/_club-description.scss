@@ -2,18 +2,30 @@
 $primary-color: #0b0c11;
 $secondary-color: #8f8f8f;
 $color-third: rgba(93, 168, 239, 0.9);
-$color-white: #fff;
-$color-black: #000;
 $color-slider-my-controls-active: #5da8ef;
 $color-slider-my-controls-from: #ebebeb;
 $color-slider-my-controls-total: #262626;
 $color-line: #78a6ec;
+$color-read-more-link: #363636;
+$color-title: #333333;
+$color-category: #7a7a7a;
+$color-price: #ce60a8;
+$color-bg-img-holder: #ececec;
+$color-01: #f9f9f9;
+
+$color-white: #fff;
+$color-black: #000;
 */
 
 .club-description {
-  padding-top: 110px;
-  /* Расстояние между секциями 190px / 2 и прописываем рядом стоящим секциям отступы по 95px */
-  padding-bottom: 95px;
+  padding-top: (110px/2);
+  padding-bottom: (95px/2);
+
+  @media (min-width: 1254px) {
+    padding-top: 110px;
+    /* Расстояние между секциями 190px / 2 и прописываем рядом стоящим секциям отступы по 95px */
+    padding-bottom: 95px;
+  }
 
   /* Размещаем картинку, загловок, текст в одну flex column */
   .club-description-wrapper {
@@ -22,13 +34,24 @@ $color-line: #78a6ec;
     flex-direction: column;
   }
 
-  // &__img {}
+  &__img {
+    width: 70%;
+
+    @media (min-width: 1254px) {
+      width: auto;
+    }
+  }
 
   &-video {
     position: absolute;
     right: 0;
     top: 43px;
     z-index: 1;
+    width: 60%;
+
+    @media (min-width: 1254px) {
+      width: auto;
+    }
 
     &__control {
       position: absolute;
@@ -36,11 +59,16 @@ $color-line: #78a6ec;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      width: 68px;
-      height: 68px;
+      width: (68px/2);
+      height: (68px/2);
       box-shadow: -2.1px -2.1px 35px 0 rgba(0, 0, 0, 0.13);
       background-color: $color-line;
       border-radius: 60px;
+
+      @media (min-width: 1254px) {
+        width: 68px;
+        height: 68px;
+      }
 
       img {
         position: absolute;
@@ -49,19 +77,36 @@ $color-line: #78a6ec;
         left: 50%;
         /* -35% будет подходить именно для этого размера треугольнка и экрана */
         transform: translate(-35%, -50%);
+        width: 35%;
+
+        @media (min-width: 1254px) {
+          width: auto;
+        }
       }
     }
   }
 
   &__text {
-    margin-top: 60px;
-    margin-left: 115px;
-    width: 336px;
-    margin-bottom: 45px;
+    margin-top: 90px;
+    margin-bottom: 0;
+    max-width: 450px;
     @extend .descr-text-p;
+
+    @media (min-width: 855px) and (max-width: 1254px) {
+      max-width: 300px;
+    }
+
+    @media (min-width: 1254px) {
+      width: 340px;
+      margin-top: 60px;
+      margin-bottom: 45px;
+      margin-left: 115px;
+    }
   }
 
   &__link {
-    margin-left: 115px;
+    @media (min-width: 1254px) {
+      margin-left: 115px;
+    }
   }
 }

@@ -686,6 +686,11 @@ $color-line: #78a6ec;
 @media (min-width: 992px) {
     .quote-wrapper:after {
         height: 100px;
+    }
+}
+
+@media (min-width: 1254px) {
+    .quote-wrapper:after {
         bottom: -58px;
     }
 }
@@ -720,18 +725,32 @@ $color-line: #78a6ec;
 $primary-color: #0b0c11;
 $secondary-color: #8f8f8f;
 $color-third: rgba(93, 168, 239, 0.9);
-$color-white: #fff;
-$color-black: #000;
 $color-slider-my-controls-active: #5da8ef;
 $color-slider-my-controls-from: #ebebeb;
 $color-slider-my-controls-total: #262626;
 $color-line: #78a6ec;
+$color-read-more-link: #363636;
+$color-title: #333333;
+$color-category: #7a7a7a;
+$color-price: #ce60a8;
+$color-bg-img-holder: #ececec;
+$color-01: #f9f9f9;
+
+$color-white: #fff;
+$color-black: #000;
 */
 .club-description {
-    padding-top: 110px;
-  /* Расстояние между секциями 190px / 2 и прописываем рядом стоящим секциям отступы по 95px */
-    padding-bottom: 95px;
+    padding-top: 55px;
+    padding-bottom: 47.5px;
   /* Размещаем картинку, загловок, текст в одну flex column */
+}
+
+@media (min-width: 1254px) {
+    .club-description {
+        padding-top: 110px;
+      /* Расстояние между секциями 190px / 2 и прописываем рядом стоящим секциям отступы по 95px */
+        padding-bottom: 95px;
+    }
 }
 
 .club-description .club-description-wrapper {
@@ -745,11 +764,28 @@ $color-line: #78a6ec;
     flex-direction: column;
 }
 
+.club-description__img {
+    width: 70%;
+}
+
+@media (min-width: 1254px) {
+    .club-description__img {
+        width: auto;
+    }
+}
+
 .club-description-video {
     position: absolute;
     right: 0;
     top: 43px;
     z-index: 1;
+    width: 60%;
+}
+
+@media (min-width: 1254px) {
+    .club-description-video {
+        width: auto;
+    }
 }
 
 .club-description-video__control {
@@ -760,12 +796,19 @@ $color-line: #78a6ec;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    width: 68px;
-    height: 68px;
+    width: 34px;
+    height: 34px;
     -webkit-box-shadow: -2.1px -2.1px 35px 0 rgba(0, 0, 0, 0.13);
     box-shadow: -2.1px -2.1px 35px 0 rgba(0, 0, 0, 0.13);
     background-color: #78a6ec;
     border-radius: 60px;
+}
+
+@media (min-width: 1254px) {
+    .club-description-video__control {
+        width: 68px;
+        height: 68px;
+    }
 }
 
 .club-description-video__control img {
@@ -777,17 +820,40 @@ $color-line: #78a6ec;
     -webkit-transform: translate(-35%, -50%);
     -ms-transform: translate(-35%, -50%);
     transform: translate(-35%, -50%);
+    width: 35%;
+}
+
+@media (min-width: 1254px) {
+    .club-description-video__control img {
+        width: auto;
+    }
 }
 
 .club-description__text {
-    margin-top: 60px;
-    margin-left: 115px;
-    width: 336px;
-    margin-bottom: 45px;
+    margin-top: 90px;
+    margin-bottom: 0;
+    max-width: 450px;
 }
 
-.club-description__link {
-    margin-left: 115px;
+@media (min-width: 855px) and (max-width: 1254px) {
+    .club-description__text {
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 1254px) {
+    .club-description__text {
+        width: 340px;
+        margin-top: 60px;
+        margin-bottom: 45px;
+        margin-left: 115px;
+    }
+}
+
+@media (min-width: 1254px) {
+    .club-description__link {
+        margin-left: 115px;
+    }
 }
 
 /*

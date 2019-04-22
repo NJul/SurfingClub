@@ -17,9 +17,15 @@ $color-black: #000;
 */
 
 .shop {
-  padding-top: 95px;
-  padding-bottom: 110px;
+  padding-top: (95px/2);
+  padding-bottom: (110px/2);
   position: relative;
+
+  @media (min-width: 1254px) {
+    padding-top: 95px;
+    padding-bottom: 110px;
+  }
+
   &:before {
     position: absolute;
     content: "";
@@ -48,7 +54,11 @@ $color-black: #000;
 .shop-slider-special-holder {
   position: absolute;
   left: 0;
-  right: -85px;
+  right: 0;
+
+  @media (min-width: 1394px) {
+    right: -85px;
+  }
 }
 
 /* удалили из разметки*/
@@ -76,9 +86,13 @@ $color-black: #000;
   padding: 15px;
   // background-color: red;
   position: absolute;
-  bottom: calc(120px + 80px);
+  bottom: 120px;
   z-index: 9;
   cursor: pointer;
+
+  @media (min-width: 650px) {
+    bottom: calc(120px + 80px);
+  }
 
   img {
     vertical-align: top;
@@ -86,21 +100,51 @@ $color-black: #000;
 }
 
 .shopSlider-arrow--left {
-  left: -70px;
-  transform: translate(-100%, 0);
+  left: -15px;
+
+  @media (min-width: 650px) {
+    left: 0;
+    transform: translate(100%, 0%);
+  }
+
+  @media (min-width: 1290px) {
+    left: 0px;
+    transform: translate(-100%, 0%);
+  }
 }
 
 .shopSlider-arrow--right {
-  right: -70px;
-  transform: translate(100%, 0);
+  right: -15px;
+
+  @media (min-width: 650px) {
+    right: 0px;
+    transform: translate(-100%, 0%);
+  }
+
+  @media (min-width: 1290px) {
+    right: 0px;
+    transform: translate(100%, 0%);
+  }
 }
 
 /* Слайдер с бордами */
 .board {
   position: relative;
-  width: 435px;
+  width: 250px;
   height: 435px;
   margin-top: 130px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 650px) {
+    padding-left: 185px;
+    width: 435px + 185px;
+  }
+
+  @media (min-width: 1254px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
   &__img-holder {
     position: absolute;
@@ -109,6 +153,14 @@ $color-black: #000;
     width: 250px;
     height: 320px;
     background-color: $color-bg-img-holder;
+
+    @media (min-width: 650px) {
+      left: 185px;
+    }
+
+    @media (min-width: 1254px) {
+      left: 0;
+    }
   }
 
   &__img {
@@ -125,7 +177,19 @@ $color-black: #000;
     // background-color: #ecb8b8;
     position: absolute;
     top: 196px;
-    left: 216px;
+    right: 0px;
+    z-index: 9;
+    text-align: right;
+
+    @media (min-width: 650px) {
+      right: auto;
+      left: (216px + 185px);
+      text-align: left;
+    }
+
+    @media (min-width: 1254px) {
+      left: 216px;
+    }
   }
 
   &__category {

@@ -528,6 +528,13 @@ a.read-more-link {
   /* Сделаем линию подчеркивания ссылки через псевдоэлемент :after */
 }
 
+@media (min-width: 0px) and (max-width: 230px) {
+    .read-more-link,
+    a.read-more-link {
+        letter-spacing: 3px;
+    }
+}
+
 .read-more-link:after,
   a.read-more-link:after {
     content: "";
@@ -544,6 +551,13 @@ a.read-more-link {
     background-image: linear-gradient(to bottom, #78a6ec, #78a6ec), linear-gradient(to bottom, #fff, #fff);
     /* Делаем синюю люинию справа немного короче, чтобы не выделялся последний  letter-spacing: 5.4px; */
     margin: 0 5px 0 0;
+}
+
+@media (min-width: 0px) and (max-width: 230px) {
+    .read-more-link:after,
+      a.read-more-link:after {
+        margin: 0 3px 0 0;
+    }
 }
 
 /* Иконки социальных сетей */
@@ -1191,6 +1205,7 @@ $color-black: #000;
     padding-left: 0px;
     padding-right: 0px;
     padding-top: 20px;
+    z-index: 9;
 }
 
 @media (min-width: 768px) {
@@ -1545,13 +1560,19 @@ $color-black: #000;
 }
 
 .camp {
-    min-height: 475px;
+    min-height: 237.5px;
     position: relative;
     margin-top: 75px;
 }
 
+@media (min-width: 768px) {
+    .camp {
+        min-height: 475px;
+    }
+}
+
 .camp__img {
-    width: 50%;
+    width: 20%;
     position: absolute;
     left: 0;
     top: 0;
@@ -1562,10 +1583,51 @@ $color-black: #000;
     background-size: cover;
 }
 
+@media (min-width: 400px) {
+    .camp__img {
+        width: 30%;
+    }
+}
+
+@media (min-width: 500px) {
+    .camp__img {
+        width: 40%;
+    }
+}
+
+@media (min-width: 768px) {
+    .camp__img {
+        width: 50%;
+    }
+}
+
 .camp__descr {
-    width: 50%;
-    padding-top: 100px;
-    padding-left: 44px;
+    /* Изначально даем ему ширину 80%, потому что у картинки 20% */
+    width: 80%;
+    padding-top: 50px;
+    padding-left: 22px;
+    padding-bottom: 50px;
+}
+
+@media (min-width: 400px) {
+    .camp__descr {
+        width: 70%;
+    }
+}
+
+@media (min-width: 500px) {
+    .camp__descr {
+        width: 60%;
+    }
+}
+
+@media (min-width: 768px) {
+    .camp__descr {
+        padding-top: 100px;
+        padding-left: 44px;
+        padding-bottom: 0;
+        width: 50%;
+    }
 }
 
 .camp__label {
@@ -1579,22 +1641,56 @@ $color-black: #000;
 }
 
 .camp__address {
-    margin-top: 60px;
-    margin-bottom: 60px;
-    padding-left: 48px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 0;
+    font-size: 18px;
     text-align: left;
-    font-size: 32px;
+}
+
+@media (min-width: 400px) {
+    .camp__address {
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 768px) {
+    .camp__address {
+        font-size: 32px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        padding-left: 48px;
+    }
 }
 
 .footer {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
 }
 
 .footer-logo-wrapper {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .footer-logo-wrapper {
+        margin-bottom: 40px;
+    }
 }
 
 .footer-nav-wrapper {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .footer-nav-wrapper {
+        margin-bottom: 40px;
+    }
 }

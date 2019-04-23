@@ -1,10 +1,14 @@
 .camp {
-  min-height: 475px;
+  min-height: (475px/2);
   position: relative;
   margin-top: 75px;
 
+  @media (min-width: 768px) {
+    min-height: 475px;
+  }
+
   &__img {
-    width: 50%;
+    width: 20%;
     position: absolute;
     left: 0;
     top: 0;
@@ -13,12 +17,41 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    @media (min-width: 400px) {
+      width: 30%;
+    }
+
+    @media (min-width: 500px) {
+      width: 40%;
+    }
+
+    @media (min-width: 768px) {
+      width: 50%;
+    }
   }
 
   &__descr {
-    width: 50%;
-    padding-top: 100px;
-    padding-left: 44px;
+    /* Изначально даем ему ширину 80%, потому что у картинки 20% */
+    width: 80%;
+    padding-top: (100px/2);
+    padding-left: (44px/2);
+    padding-bottom: (100px/2);
+
+    @media (min-width: 400px) {
+      width: 70%;
+    }
+
+    @media (min-width: 500px) {
+      width: 60%;
+    }
+
+    @media (min-width: 768px) {
+      padding-top: 100px;
+      padding-left: 44px;
+      padding-bottom: 0;
+      width: 50%;
+    }
   }
 
   &__label {
@@ -32,12 +65,22 @@
   }
 
   &__address {
-    margin-top: 60px;
-    margin-bottom: 60px;
-    padding-left: 48px;
-
+    margin-top: (60px/2);
+    margin-bottom: (60px/2);
+    padding-left: 0;
     @extend .title;
+    font-size: 18px;
     text-align: left;
-    font-size: 32px;
+
+    @media (min-width: 400px) {
+      font-size: 26px;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 32px;
+      margin-top: 60px;
+      margin-bottom: 60px;
+      padding-left: 48px;
+    }
   }
 }

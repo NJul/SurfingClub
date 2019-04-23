@@ -11,11 +11,346 @@
 
 <body>
   <header>
+    <nav class="container navigation-wrapper relative">
 
+      <div class="logo-wrapper">
+        <a href="#!" class="logo">
+          <img src="images/logo/logo.svg" alt="Surfing Club" />
+        </a>
+      </div>
+
+      <!-- чтобы изначально красный квадрат был спозиционирован, вертикальная надпись  -->
+      <div class="site-descr">
+        <!-- а текст был просто внутри него -->
+        <div class="site-descr__content">
+          First&nbsp;Surfing&nbsp;Magazine
+        </div>
+      </div>
+
+      <ul class="navigation">
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Stories</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Events</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Places</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Boards</a>
+        </li>
+      </ul>
+
+    </nav>
+    <!-- Social icons horizontal -->
+    <div class="container hidden-min-width-1254px">
+      <div class="social social-horizontal">
+        <a href="#" class="social__item">
+          <img src="images/socials/social-tumblr.svg" alt="Tumblr" />
+        </a>
+        <a href="#" class="social__item">
+          <img src="images/socials/social-twitter.svg" alt="Twitter" />
+        </a>
+        <a href="#" class="social__item">
+          <img src="images/socials/social-vimeo.svg" alt="Vimeo" />
+        </a>
+      </div>
+    </div>
+
+    <!-- В обертке slider-my-wrapper будут распологаться наши слайды -->
+    <div class="slider-my-wrapper">
+
+      <!-- Set up your HTML -->
+      <div id="headerSlider" class="owl-carousel">
+        <div class="container slider-my">
+          <div class="slider-my__descr">
+            <div class="slider-my__heading">
+              <span class="subtitle">Your</span>
+              <h2>Beautiful Escape</h2>
+            </div>
+            <div class="slider-my__text">
+              <p>
+                One of the greatest things about the sport of surfing is that
+                you need only three things: your body, a surfboard, and a wave.
+              </p>
+            </div>
+          </div>
+          <div class="slider-my__img slider-my__img--bg-1"></div>
+        </div>
+        <div class="container slider-my">
+          <div class="slider-my__descr">
+            <div class="slider-my__heading">
+              <span class="subtitle">Your</span>
+              <h2>Beautiful Escape</h2>
+            </div>
+            <div class="slider-my__text">
+              <p>
+                One of the greatest things about the sport of surfing is that
+                you need only three things: your body, a surfboard, and a wave.
+              </p>
+            </div>
+          </div>
+          <div class="slider-my__img slider-my__img--bg-1"></div>
+        </div>
+        <div class="container slider-my">
+          <div class="slider-my__descr">
+            <div class="slider-my__heading">
+              <span class="subtitle">Your</span>
+              <h2>Beautiful Escape</h2>
+            </div>
+            <div class="slider-my__text">
+              <p>
+                One of the greatest things about the sport of surfing is that
+                you need only three things: your body, a surfboard, and a wave.
+              </p>
+            </div>
+          </div>
+          <div class="slider-my__img slider-my__img--bg-1"></div>
+        </div>
+        <div class="container slider-my">
+          <div class="slider-my__descr">
+            <div class="slider-my__heading">
+              <span class="subtitle">Your</span>
+              <h2>Beautiful Escape</h2>
+            </div>
+            <div class="slider-my__text">
+              <p>
+                One of the greatest things about the sport of surfing is that
+                you need only three things: your body, a surfboard, and a wave.
+              </p>
+            </div>
+          </div>
+          <div class="slider-my__img slider-my__img--bg-1"></div>
+        </div>
+        <div class="container slider-my">
+          <div class="slider-my__descr">
+            <div class="slider-my__heading">
+              <span class="subtitle">Your</span>
+              <h2>Beautiful Escape</h2>
+            </div>
+            <div class="slider-my__text">
+              <p>
+                One of the greatest things about the sport of surfing is that
+                you need only three things: your body, a surfboard, and a wave.
+              </p>
+            </div>
+          </div>
+          <div class="slider-my__img slider-my__img--bg-1"></div>
+        </div>
+      </div>
+
+      <div class="container relative">
+        <!-- slides controls -->
+        <div class="slider-my-controls">
+
+          <a id="headerSliderLeft" class="slider-my-controls__left" href="#">
+            <img src="images/controls/header-slider-left.svg" alt="Left" />
+          </a>
+
+          <!-- slider-my-controls-number отдельный блок, а не элемент -->
+          <div class="slider-my-controls-number">
+            <span class="slider-my-controls-number__active"></span>
+            <span class="slider-my-controls-number__from">/</span>
+            <span class="slider-my-controls-number__total"></span>
+          </div>
+
+          <a id="headerSliderRight" class="slider-my-controls__right" href="#">
+            <img src="images/controls/header-slider-right.svg" alt="Right" />
+          </a>
+        </div>
+
+        <!-- Social icons vertical -->
+        <div class="header-social-wrapper">
+          <div class="social social--vertical">
+            <a href="#" class="social__item">
+              <img src="images/socials/social-tumblr.svg" alt="Tumblr" />
+            </a>
+            <a href="#" class="social__item">
+              <img src="images/socials/social-twitter.svg" alt="Twitter" />
+            </a>
+            <a href="#" class="social__item">
+              <img src="images/socials/social-vimeo.svg" alt="Vimeo" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
   <main>
+    <section class="quote">
+      <div class="quote-wrapper">
+        <div class="quote__text">
+          <h4>
+            Surfing is the most blissful experience you can have on this
+            planet, a taste of heaven.
+          </h4>
+        </div>
+        <div class="quote__author">
+          John McCarthy
+        </div>
+      </div>
+    </section>
+    <div class="club-description">
+      <div class="container relative">
+        <div class="club-description-wrapper">
+          <div class="club-description__img">
+            <img src="images/img/img-2.jpg" alt="Picture" />
+          </div>
+          <!-- div ниже больше похож на блок, чем на элемент, потому что внутри него будут еще свои блоки -->
+          <div class="club-description-video">
+            <img src="images/img/img-3.jpg" alt="Video" />
+            <div class="club-description-video__control">
+              <img src="images/controls/control-play.svg" alt="Play" />
+            </div>
+          </div>
+          <div class="club-description__text">
+            <p>
+              By better understanding the various aspects of surfing, you will
+              improve faster and have more fun in the water.
+            </p>
+          </div>
+          <div class="club-description__link">
+            <a href="#" class="read-more-link">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <section class="subscribe-wrapper">
+    <section class="shop">
+      <!-- Необходимо прописать container, так как этот контент центрирован и ограничен по ширине -->
+      <div class="container">
+        <h2 class="title">
+          <span class="subtitle">Shop</span>
+          Surfboards
+        </h2>
+      </div>
+
+      <div class="container shop-slider-wrapper">
+        <div class="shop-slider-special-holder">
+          <div id="shopSlider" class="owl-carousel">
+            <!-- board -->
+            <div class="board">
+              <!-- board делаем блоком ВЕМ, так как внутри будет много элементов. -->
+
+              <div class="board__img-holder">
+                <img class="board__img" src="images/boards/board-1.png" alt="Surfing board 1" />
+              </div>
+
+              <div class="board-descr">
+                <div class="board__category">Funboards</div>
+                <div class="board__title">Chilli Rare Bird</div>
+
+                <div class="board-buy">
+                  <div class="board-buy__price">$890</div>
+                  <div class="board-buy__link">Buy</div>
+                </div>
+              </div>
+            </div>
+            <!-- // board -->
+            <!-- board -->
+            <div class="board">
+              <div class="board__img-holder">
+                <img class="board__img" src="images/boards/board-2.png" alt="Surfing board 2" />
+              </div>
+
+              <div class="board-descr">
+                <div class="board__category">Surfboards</div>
+                <div class="board__title">Emery NEM XF</div>
+
+                <div class="board-buy">
+                  <div class="board-buy__price">$950</div>
+                  <div class="board-buy__link">Buy</div>
+                </div>
+              </div>
+            </div>
+            <!-- // board -->
+            <!-- board -->
+            <div class="board">
+              <div class="board__img-holder">
+                <img class="board__img" src="images/boards/board-3.png" alt="Surfing board 3" />
+              </div>
+
+              <div class="board-descr">
+                <div class="board__category">Funboards</div>
+                <div class="board__title">Agency GROM</div>
+
+                <div class="board-buy">
+                  <div class="board-buy__price">$670</div>
+                  <div class="board-buy__link">Buy</div>
+                </div>
+              </div>
+            </div>
+            <!-- // board -->
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="shopSlider-controls">
+          <div id="shopSliderLeft" class="shopSlider-arrow shopSlider-arrow--left">
+            <img src="./images/controls/boards-left.svg" alt="Prev">
+          </div>
+          <div id="shopSliderRight" class="shopSlider-arrow shopSlider-arrow--right">
+            <img src="./images/controls/boards-right.svg" alt="Next">
+          </div>
+        </div>
+      </div>
+      <!-- // shop-slider -->
+
+      <div class="container">
+        <div class="shop-link-wrapper">
+          <a href="#" class="read-more-link">Show All</a>
+        </div>
+      </div>
+
+    </section>
+
+    <div class="container">
+      <article class="article article--even">
+        <div class="article__descr">
+          <h2 class="title" data-number="01">Surf Training</h2>
+          <div class="article__text">
+            <p>By better understanding the various aspects of surfing, By better understanding the various aspects of
+              surfing,
+              you will improve faster and have more fun in the water.</p>
+          </div>
+          <a href="#" class="read-more-link">Read More</a>
+        </div>
+        <div class="article__preview">
+          <img src="images/img/img-4.jpg" alt="Surf Training">
+          <div class="article_preview-descr">
+            <div class="article_preview-descr-content">
+              Surf&nbsp;Camps
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="container">
+      <!-- Даем модификатор article двойной дефис odd -->
+      <article class="article article--odd">
+        <div class="article__descr">
+          <h2 class="title" data-number="02">Point Break</h2>
+          <div class="article__text">
+            <p>By better understanding the various aspects of By better understanding the various aspects of surfing, By
+              better understanding the various aspects of surfing, you will improve faster and have more fun in the
+              water.
+            </p>
+          </div>
+          <a href="#" class="read-more-link">Read More</a>
+        </div>
+        <div class="article__preview">
+          <img src="images/img/img-5.jpg" alt="Surf Training">
+          <div class="article_preview-descr">
+            <div class="article_preview-descr-content">
+              Surf&nbsp;Camps
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="subscribe-wrapper">
       <div class="subscribe">
         <h2 class="title">Join the Club</h2>
         <div class="title-descr">By better understanding the various aspects of surfing, you will improve faster
@@ -25,10 +360,66 @@
           <input type="submit" class="subscribe__submit">
         </form>
       </div>
-    </section>
-
+    </div>
+    <div class="camp">
+      <!-- Здесь сразу пропишем в инлайн стили для картинки с классом camp__img -->
+      <div class="camp__img" style="background-image: url(./images/img/img-6.jpg);"></div>
+      <div class="container flex-end">
+        <div class="camp__descr">
+          <div class="camp__label">
+            Our Camp
+          </div>
+          <div class="camp__address">
+            CA 91932, USA<br>
+            Imperial Beach<br>
+            560 Silver Strand Blvd
+          </div>
+          <a href="#" class="read-more-link">Get in Touch</a>
+        </div>
+      </div>
+    </div>
   </main>
+  <footer class="footer">
+    <div class="container flex-column-center">
 
+      <div class="footer-logo-wrapper">
+        <a href="#!" class="logo">
+          <img src="images/logo/logo.svg" alt="Surfing Club" />
+        </a>
+      </div>
+
+      <div class="footer-nav-wrapper">
+        <ul class="navigation">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Stories</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Events</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Places</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Boards</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="social">
+        <a href="#" class="social__item">
+          <img src="images/socials/social-tumblr.svg" alt="Tumblr" />
+        </a>
+        <a href="#" class="social__item">
+          <img src="images/socials/social-twitter.svg" alt="Twitter" />
+        </a>
+        <a href="#" class="social__item">
+          <img src="images/socials/social-vimeo.svg" alt="Vimeo" />
+        </a>
+      </div>
+
+
+    </div>
+  </footer>
   <script src="./js/all.min.js"></script>
 </body>
 

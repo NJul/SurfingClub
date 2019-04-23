@@ -13,6 +13,9 @@ $color-read-more-link: #363636;
 
 .read-more-link,
 a.read-more-link {
+  @media (min-width: 0px) and (max-width: 230px) {
+    letter-spacing: 3px;
+  }
   position: relative;
   font-family: $font-third;
   font-size: 9px;
@@ -28,6 +31,9 @@ a.read-more-link {
 
   /* Сделаем линию подчеркивания ссылки через псевдоэлемент :after */
   &:after {
+    @media (min-width: 0px) and (max-width: 230px) {
+      margin: 0 3px 0 0;
+    }
     content: "";
     position: absolute;
     left: 0;
@@ -36,7 +42,8 @@ a.read-more-link {
     height: 2px;
     background-color: $color-slider-my-controls-active;
     opacity: 0.7;
-    background-image: linear-gradient(to bottom, $color-line, $color-line), linear-gradient(to bottom, $color-white, $color-white);
+    background-image: linear-gradient(to bottom, $color-line, $color-line),
+      linear-gradient(to bottom, $color-white, $color-white);
     /* Делаем синюю люинию справа немного короче, чтобы не выделялся последний  letter-spacing: 5.4px; */
     margin: 0 5px 0 0;
   }

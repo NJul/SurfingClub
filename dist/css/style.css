@@ -1424,14 +1424,25 @@ $color-black: #000;
 }
 
 .subscribe {
-    width: 590px;
+    max-width: 590px;
     margin-top: 50px;
-    padding-top: 160px;
-    padding-bottom: 75px;
+    padding-top: 80px;
+    padding-bottom: 37.5px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 1254px) {
+    .subscribe {
+        padding-top: 160px;
+        padding-bottom: 75px;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .subscribe:before {
@@ -1442,9 +1453,16 @@ $color-black: #000;
     -webkit-transform: translate(-50%);
     -ms-transform: translate(-50%);
     transform: translate(-50%);
+    display: block;
     width: 2px;
-    height: 100px;
+    height: 50px;
     background-color: #78a6ec;
+}
+
+@media (min-width: 1254px) {
+    .subscribe:before {
+        height: 100px;
+    }
 }
 
 .subscribe .title, .subscribe .camp__address {
@@ -1479,6 +1497,13 @@ $color-black: #000;
     transition: 0.2s ease-in;
 }
 
+@media (min-width: 0) and (max-width: 270px) {
+    .subscribe__input {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
 .subscribe__input:active, .subscribe__input:focus {
       /* Рамка с текстом, насыщенность 15% */
     border: 1px solid rgba(97, 97, 97, 0.15);
@@ -1488,6 +1513,9 @@ $color-black: #000;
 
 .subscribe__submit {
     width: 50px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50px;
+    flex: 0 0 50px;
     height: 50px;
     background-color: #5da8ef;
     background-image: url("../images/controls/subscribe-arrow.svg");

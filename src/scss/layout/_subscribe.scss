@@ -41,14 +41,23 @@ $color-black: #000;
 }
 
 .subscribe {
-  width: 590px;
+  max-width: 590px;
   margin-top: 50px;
-  padding-top: 160px;
-  padding-bottom: 75px;
+  padding-top: (160px/2);
+  padding-bottom: (75px/2);
   position: relative;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (min-width: 1254px) {
+    padding-top: 160px;
+    padding-bottom: 75px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   &:before {
     position: absolute;
@@ -56,9 +65,14 @@ $color-black: #000;
     left: 50%;
     top: 0;
     transform: translate(-50%);
+    display: block;
     width: 2px;
-    height: 100px;
+    height: (100px/2);
     background-color: $color-line;
+
+    @media (min-width: 1254px) {
+      height: 100px;
+    }
   }
 
   .title {
@@ -70,6 +84,10 @@ $color-black: #000;
   }
 
   &__input {
+    @media (min-width: 0) and (max-width: 270px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
     font-family: $font-third;
     font-size: 9px;
     font-weight: bold;
@@ -99,6 +117,7 @@ $color-black: #000;
 
   &__submit {
     width: 50px;
+    flex: 0 0 50px;
     height: 50px;
     background-color: $color-slider-my-controls-active;
     background-image: url("../images/controls/subscribe-arrow.svg");

@@ -1139,55 +1139,131 @@ $color-black: #000;
 }
 
 .article {
-    padding-top: 60px;
-    padding-bottom: 60px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  /* Сначала показывается картинка, потом текст. */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  /* Блок, который содержит картинку .article__preview */
+}
+
+@media (min-width: 768px) {
+    .article {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+@media (min-width: 1254px) {
+    .article {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 }
 
 .article--odd {
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+
+@media (min-width: 768px) {
+    .article--odd {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+    }
 }
 
 .article__descr {
-    width: 462px;
-    padding-left: 70px;
-    padding-right: 50px;
-    padding-top: 80px;
+    width: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .article__descr {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media (min-width: 1254px) {
+    .article__descr {
+        width: 462px;
+        padding-left: 70px;
+        padding-right: 50px;
+        padding-top: 80px;
+    }
 }
 
 .article-odd .article__descr {
-    width: 515px;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 515px;
-    flex: 0 0 515px;
-    padding-left: 75px;
-    padding-right: 105px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .article-odd .article__descr {
+        padding-left: 15px;
+    }
+}
+
+@media (min-width: 1254px) {
+    .article-odd .article__descr {
+        width: 515px;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 515px;
+        flex: 0 0 515px;
+        padding-left: 75px;
+        padding-right: 105px;
+    }
 }
 
 .article .title, .article .camp__address {
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 32px;
     line-height: 1.57;
     text-align: left;
-    position: relative;
-    margin-bottom: 35px;
+}
+
+@media (min-width: 1254px) {
+    .article .title, .article .camp__address {
+        font-size: 42px;
+        margin-bottom: 45px;
+    }
 }
 
 .article .title:before, .article .camp__address:before {
     content: attr(data-number);
     font-family: "League Spartan Bold";
-    font-size: 130px;
+    font-size: 70px;
     font-weight: bold;
     line-height: 0.51;
     letter-spacing: 13px;
     color: #f9f9f9;
     position: absolute;
     left: 0;
-    top: -17px;
+    top: -5px;
     z-index: -1;
+}
+
+@media (min-width: 1254px) {
+    .article .title:before, .article .camp__address:before {
+        font-size: 130px;
+        top: -17px;
+    }
 }
 
 .article .title:after, .article .camp__address:after {
@@ -1201,58 +1277,110 @@ $color-black: #000;
 }
 
 .article__text {
-    margin-bottom: 60px;
-    width: 345px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 1254px) {
+    .article__text {
+        margin-bottom: 60px;
+    }
 }
 
 .article__preview {
-    width: 762px;
+    width: 100%;
     position: relative;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 762px;
-    flex: 0 0 762px;
+    margin-bottom: 25px;
     /* Изменяем его от внешнего модификатора, scss развернет & в: .article--odd .article__preview */
-    /* fles: flex-grow  flex-shrink базовый размер */
+}
+
+@media (min-width: 768px) {
+    .article__preview {
+        width: 50%;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+    }
+}
+
+@media (min-width: 1254px) {
+    .article__preview {
+        width: 762px;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 762px;
+        flex: 0 0 762px;
+        margin-bottom: 0;
+    }
 }
 
 .article--odd .article__preview {
-    width: 490px;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 490px;
-    flex: 0 0 490px;
+    width: 100%;
+}
+
+@media (min-width: 1254px) {
+    .article--odd .article__preview {
+        width: 490px;
+          /* fles: flex-grow  flex-shrink базовый размер */
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 490px;
+        flex: 0 0 490px;
+    }
 }
 
 .article__preview .article_preview-descr {
-      /* background-color: red;
-      width: 10px;
-      height: 10px; */
     position: absolute;
-    right: -30px;
-    top: 0;
+      /* Цвет вертикальной надписи на разных экранах */
 }
 
-@media (max-width: 1400px) {
-    .article__preview .article_preview-descr {
-          /* Модификатор обертка, на место & подставляется article_preview-descr */
+@media (min-width: 0) and (max-width: 289px) {
+    .article--even .article__preview .article_preview-descr {
+        right: 15px;
+        top: 15px;
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
     }
 }
 
-@media (max-width: 1400px) and (max-width: 1400px) {
+@media (min-width: 290px) {
     .article--even .article__preview .article_preview-descr {
-        right: 40px;
+        right: 30px;
         top: 30px;
     }
+}
 
-    .article--even .article__preview .article_preview-descr .article_preview-descr-content {
-        color: #fff;
+@media (min-width: 1254px) {
+    .article--even .article__preview .article_preview-descr {
+          /* background-color: red;
+          width: 10px;
+          height: 10px; */
+        right: -30px;
+        top: 0;
     }
 }
 
 .article--odd .article__preview .article_preview-descr {
-        /* Увести ее в левую сторону на 30px за левую границу */
-    left: -30px;
-        /* right нужно обнулить, поэтому сделали right: auto; */
-    right: auto;
+    left: 30px;
+    top: 30px;
+}
+
+@media (min-width: 1254px) {
+    .article--odd .article__preview .article_preview-descr {
+            /* Увести ее в левую сторону на 30px за левую границу */
+        left: -30px;
+            /* right нужно обнулить, поэтому сделали right: auto; */
+            /* right: auto; */
+        top: 0;
+    }
+}
+
+.article__preview .article_preview-descr-content {
+    color: #fff;
+}
+
+@media (min-width: 1254px) {
+    .article__preview .article_preview-descr-content {
+        color: rgba(11, 12, 17, 0.2);
+    }
 }
 
 /*

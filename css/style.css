@@ -317,6 +317,8 @@ $color-black: #000;
   /* Ниже два очень важных момента, чтобы не появлялся горизонтальный скролл. */
     width: 100%;
     overflow: hidden;
+    padding-top: 50px;
+    margin-top: -50px;
   /* Отступ после слайдера */
     padding-bottom: 95px;
   /* Обращаюсь к .owl-carousel , который имеет id="headerSlider", нахожу внутри него блок карусели .owl-stage-outer и делаю overflow: visible; Теперь мы видим тень внизу слайдера, которая раньше была скрыта. */

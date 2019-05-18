@@ -22,6 +22,8 @@ $color-black: #000;
   /* Ниже два очень важных момента, чтобы не появлялся горизонтальный скролл. */
   width: 100%;
   overflow: hidden;
+  padding-top: 50px;
+  margin-top: -50px;
   /* Отступ после слайдера */
   padding-bottom: 95px;
 

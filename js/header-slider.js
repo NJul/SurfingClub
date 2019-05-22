@@ -1,5 +1,7 @@
 "use strict";
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 $(document).ready(function () {
   /* В переменную записывается селектор, который выбирает обертку нашего слайдера. Чтобы поттом к этой переменной можно было обращаться. */
   // $(".owl-carousel").owlCarousel({
@@ -17,43 +19,44 @@ $(document).ready(function () {
   // smartSpeed: 1000
   // });
   var headerSlider = $("#headerSlider");
-  headerSlider.on('initialized.owl.carousel', function (event) {
-    $('.slider-my-controls-number__active').text(event.item.index + 1);
-    $('.slider-my-controls-number__total').text(event.item.count);
-  });
-  headerSlider.owlCarousel({
+  headerSlider.owlCarousel(_defineProperty({
     /* Показывается 1 слайд за 1 раз */
     items: 1,
 
     /* Зацикливание, бесконечная прокрутка слайдов */
-    // loop: true,
+    loop: true,
 
     /* Точки выбора слайда по умолчанию true */
     dots: false,
 
     /* Скорость прокрутки слайда, 1000 = 1 секунда */
-    smartSpeed: 1000
-  }); // Go to the next item
+    smartSpeed: 1000,
+    autoplay: true,
+    autoplayHoverPause: true,
 
-  /* Находим на странице элемент с контроллом и по клику будем, например, переключать на следующий слайд.  */
+    /* Настраиваем точное отображение порядкового номера слайда в счетчике слайдов карусели */
+    onInitialized: counter,
+    onChanged: counter
+  }, "onInitialized", function onInitialized(e) {
+    $(".slider-my-controls-number__active").text(1);
+    $(".slider-my-controls-number__total").text(this.items().length);
+  }));
+  /* Находим на странице элемент с контроллом и по клику будем переключать на следующий слайд.  */
 
-  $('#headerSliderRight').click(function () {
-    headerSlider.trigger('next.owl.carousel');
-  }); // Go to the previous item
-
-  $('#headerSliderLeft').click(function () {
-    // With optional speed parameter
-    // Parameters has to be in square bracket , '[]' )
-    headerSlider.trigger('prev.owl.carousel');
+  $("#headerSliderRight").click(function () {
+    headerSlider.trigger("next.owl.carousel");
   });
-  headerSlider.on('changed.owl.carousel', function (event) {
-    /* Распечатаем, сколько всего у нас элементов слайдера */
-    // console.log(event.item.count);
-
-    /* и текущий слайд */
-    // console.log(event.item.index);
-    // console.log(event.page.index);
-    $('.slider-my-controls-number__active').text(event.item.index + 1);
-    $('.slider-my-controls-number__total').text(event.item.count);
+  $("#headerSliderLeft").click(function () {
+    headerSlider.trigger("prev.owl.carousel");
   });
+  /* Настраиваем точное отображение порядкового номера слайда в счетчике слайдов карусели */
+
+  function counter(event) {
+    if (!event.namespace) {
+      return;
+    }
+
+    var slides = event.relatedTarget;
+    $(".slider-my-controls-number__active").text(slides.relative(slides.current()) + 1);
+  }
 });

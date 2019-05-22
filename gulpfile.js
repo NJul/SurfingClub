@@ -1,9 +1,6 @@
 "use strict";
 
-const {
-  src,
-  dest
-} = require("gulp");
+const { src, dest } = require("gulp");
 const gulp = require("gulp");
 const autoprefixer = require("gulp-autoprefixer");
 const cssbeautify = require("gulp-cssbeautify");
@@ -22,7 +19,6 @@ const concat = require("gulp-concat");
 const sourcemaps = require("gulp-sourcemaps");
 const fileinclude = require("gulp-file-include");
 
-
 /* Paths to source / build / watch files
 =========================*/
 
@@ -36,8 +32,21 @@ var path = {
   },
   src: {
     html: "src/html/**/*.html",
-    js: ["src/libs/jQuery/jquery-3.3.1.min.js", "src/libs/OwlCarousel2/owl.carousel.min.js", "src/js/header-slider.js", "src/js/shop-slider.js", "src/js/scripts.js"],
-    css: ["src/css/reset.css", "src/css/bootstrap-reboot.min.css", "src/libs/OwlCarousel2/assets/owl.carousel.min.css", "src/libs/OwlCarousel2/assets/owl.theme.default.min.css", "src/css/fonts.css", "src/scss/style.scss"],
+    js: [
+      "src/libs/jQuery/jquery-3.3.1.min.js",
+      "src/libs/OwlCarousel2/owl.carousel.min.js",
+      "src/js/header-slider.js",
+      "src/js/shop-slider.js",
+      "src/js/scripts.js"
+    ],
+    css: [
+      "src/css/reset.css",
+      "src/libs/bootstrap-reboot/bootstrap-reboot.min.css",
+      "src/libs/OwlCarousel2/assets/owl.carousel.min.css",
+      "src/libs/OwlCarousel2/assets/owl.theme.default.min.css",
+      "src/css/fonts.css",
+      "src/scss/style.scss"
+    ],
     images: "src/images/**/*.{jpg,png,svg,gif,ico}",
     fonts: "src/fonts/**/*.{otf,eot,svg,ttf,woff,woff2}"
   },
@@ -51,7 +60,6 @@ var path = {
   },
   clean: "./dist"
 };
-
 
 /* Tasks
 =========================*/
@@ -72,64 +80,78 @@ function browserSyncReload(done) {
 }
 
 function html() {
-  return src(path.src.html, {
+  return (
+    src(path.src.html, {
       base: "./src/html/"
     })
-    /* plumber нуже для обработки ошибок */
-    .pipe(plumber())
-    /* Для встройки одного файла HTML в другой.  @@include('blocks/test.html') */
-    .pipe(fileinclude({
-      prefix: '@@'
-    }))
-    /* Сохранить исходный файл */
-    .pipe(dest(path.build.html))
-    /* Обновить */
-    .pipe(browsersync.stream());
+      /* plumber нуже для обработки ошибок */
+      .pipe(plumber())
+      /* Для встройки одного файла HTML в другой.  @@include('blocks/test.html') */
+      .pipe(
+        fileinclude({
+          prefix: "@@"
+        })
+      )
+      /* Сохранить исходный файл */
+      .pipe(dest(path.build.html))
+      /* Обновить */
+      .pipe(browsersync.stream())
+  );
 }
 
 function css() {
-  return src(path.src.css, {
+  return (
+    src(path.src.css, {
       base: "./src/scss/"
     })
-    .pipe(plumber())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: ["last 6 versions"],
-      cascade: true
-    }))
-    .pipe(cssbeautify())
-    .pipe(dest(path.build.css))
-    .pipe(sourcemaps.init())
-    .pipe(cleanCSS())
-    .pipe(removeComments())
-    .pipe(concat("all.css"))
-    .pipe(rename({
-      suffix: ".min",
-      extname: ".css"
-    }))
-    .pipe(sourcemaps.write("../css/map"))
-    .pipe(dest(path.build.css))
-    /* Обновляем браузер, когда что-то изменилось. */
-    .pipe(browsersync.stream());
+      .pipe(plumber())
+      .pipe(sass().on("error", sass.logError))
+      .pipe(
+        autoprefixer({
+          browsers: ["last 6 versions"],
+          cascade: true
+        })
+      )
+      .pipe(cssbeautify())
+      .pipe(dest(path.build.css))
+      .pipe(sourcemaps.init())
+      .pipe(cleanCSS())
+      .pipe(removeComments())
+      .pipe(concat("all.css"))
+      .pipe(
+        rename({
+          suffix: ".min",
+          extname: ".css"
+        })
+      )
+      .pipe(sourcemaps.write("../css/map"))
+      .pipe(dest(path.build.css))
+      /* Обновляем браузер, когда что-то изменилось. */
+      .pipe(browsersync.stream())
+  );
 }
 
 function js() {
   return src(path.src.js, {
-      base: "./src/js/"
-    })
+    base: "./src/js/"
+  })
     .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(rigger())
-    .pipe(babel({
-      presets: ["@babel/env"]
-    }))
+    .pipe(
+      babel({
+        presets: ["@babel/env"]
+      })
+    )
     .pipe(gulp.dest(path.build.js))
     .pipe(uglify())
     .pipe(concat("all.js"))
-    .pipe(rename({
-      suffix: ".min",
-      extname: ".js"
-    }))
+    .pipe(
+      rename({
+        suffix: ".min",
+        extname: ".js"
+      })
+    )
     .pipe(sourcemaps.write("../js/map"))
     .pipe(dest(path.build.js))
     .pipe(browsersync.stream());
@@ -159,7 +181,6 @@ function watchFiles() {
 
 const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts));
 const watch = gulp.parallel(build, watchFiles, browserSync);
-
 
 // export tasks
 exports.html = html;

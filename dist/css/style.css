@@ -439,6 +439,34 @@ $color-black: #000;
     box-shadow: -16px 25px 65px rgba(19, 20, 24, 0.2);
 }
 
+.slider-my-wrapper .slider-my__img--bg-2 {
+    background: url("../images/img/img-header-2.jpg") no-repeat center center;
+    background-size: cover;
+    -webkit-box-shadow: -16px 25px 65px rgba(19, 20, 24, 0.2);
+    box-shadow: -16px 25px 65px rgba(19, 20, 24, 0.2);
+}
+
+.slider-my-wrapper .slider-my__img--bg-3 {
+    background: url("../images/img/img-header-3.jpg") no-repeat center center;
+    background-size: cover;
+    -webkit-box-shadow: -16px 25px 65px rgba(19, 20, 24, 0.2);
+    box-shadow: -16px 25px 65px rgba(19, 20, 24, 0.2);
+}
+
+.slider-my-wrapper .slider-my__img--bg-4 {
+    background: url("../images/img/img-header-4.jpg") no-repeat center center;
+    background-size: cover;
+    -webkit-box-shadow: -16px 25px 65px rgba(19, 20, 24, 0.2);
+    box-shadow: -16px 25px 65px rgba(19, 20, 24, 0.2);
+}
+
+.slider-my-wrapper .slider-my__img--bg-5 {
+    background: url("../images/img/img-header-5.jpg") no-repeat center center;
+    background-size: cover;
+    -webkit-box-shadow: -16px 25px 65px rgba(19, 20, 24, 0.2);
+    box-shadow: -16px 25px 65px rgba(19, 20, 24, 0.2);
+}
+
 .slider-my-wrapper .slider-my-controls {
     margin-top: 20px;
     position: absolute;
